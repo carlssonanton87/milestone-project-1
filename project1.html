@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vegan Kök - Växtbaserade Recept</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <div class="nav-container">
-        <nav class="navbar container">
+    <header class="nav-container">
+        <nav class="navbar container" role="navigation">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/images/logo.svg" alt="Vegan Kök Logo" width="120">
@@ -25,67 +25,70 @@
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/hero-main.jpg');">
-        <div class="container">
-            <div class="hero-content text-center">
-                <h1>Upptäck Växtbaserad Matglädje</h1>
-                <p class="mt-2">Enkla och näringsrika recept för en grönare vardag</p>
-                <a href="recipes/index.html" class="btn btn-primary mt-3">Utforska Våra Recept</a>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/hero-main.jpg');">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <h1>Upptäck Växtbaserad Matglädje</h1>
+                    <p class="mt-2">Enkla och näringsrika recept för en grönare vardag</p>
+                    <a href="recipes/index.html" class="btn btn-primary mt-3">Utforska Våra Recept</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Recipes -->
-    <section class="container mt-3">
-        <h2 class="text-center mb-2">Populära Recept</h2>
-        <div class="recipe-grid">
-            <!-- Recipe Card 1 -->
-            <article class="recipe-card">
-                <img src="assets/images/recipes/buddha-bowl.jpg" alt="Buddha Bowl" class="recipe-image">
-                <div class="recipe-content">
-                    <h3>Färgglad Buddha Bowl</h3>
-                    <div class="recipe-meta">
-                        <span>25 min</span>
-                        <span>Enkel</span>
+        <!-- Featured Recipes -->
+        <section class="container mt-3">
+            <h2 class="text-center mb-2">Populära Recept</h2>
+            <div class="recipe-grid">
+                <!-- Recipe Card 1 -->
+                <article class="recipe-card">
+                    <img src="assets/images/recipes/buddha-bowl.jpg" alt="Buddha Bowl" class="recipe-image">
+                    <div class="recipe-content">
+                        <h3>Färgglad Buddha Bowl</h3>
+                        <div class="recipe-meta">
+                            <span>25 min</span>
+                            <span>Enkel</span>
+                        </div>
+                        <a href="recipes/lunch.html#buddha-bowl" class="btn btn-primary mt-1">Se Recept</a>
                     </div>
-                    <a href="recipes/lunch.html#buddha-bowl" class="btn btn-primary mt-1">Se Recept</a>
-                </div>
-            </article>
-            <!-- Add more recipe cards -->
-        </div>
-    </section>
+                </article>
+                <!-- Add more recipe cards as needed -->
+            </div>
+        </section>
 
-    <!-- About Preview -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Vår Vision</h2>
-                    <p class="mt-2">Vi tror på kraften i växtbaserad mat och vill inspirera till en hälsosam livsstil som är bra både för dig och planeten.</p>
-                    <a href="about.html" class="btn btn-primary mt-2">Läs Mer Om Oss</a>
-                </div>
-                <div class="about-image">
-                    <img src="assets/images/about/team.jpg" alt="Vårt Team" width="400" height="400">
+        <!-- About Preview -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Vår Vision</h2>
+                        <p class="mt-2">Vi tror på kraften i växtbaserad mat och vill inspirera till en hälsosam livsstil som är bra både för dig och planeten.</p>
+                        <a href="about.html" class="btn btn-primary mt-2">Läs Mer Om Oss</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/about/team.jpg" alt="Vårt Team" width="400" height="400">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Newsletter -->
-    <section class="container mt-3">
-        <div class="newsletter text-center">
-            <h2>Få Inspiration Direkt i Din Inkorg</h2>
-            <form class="contact-form mt-2">
-                <div class="form-group">
-                    <input type="email" class="form-input" placeholder="Din E-postadress" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Prenumerera</button>
-            </form>
-        </div>
-    </section>
+        <!-- Newsletter -->
+        <section class="container mt-3">
+            <div class="newsletter text-center">
+                <h2>Få Inspiration Direkt i Din Inkorg</h2>
+                <form class="contact-form mt-2">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Din E-postadress" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Prenumerera</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer mt-3">

@@ -1,6 +1,6 @@
 # Vegan Kök - Recept för Alla!
 
-![Vegan Kök Logo](path/to/logo.png)
+![Vegan Kök Logo](images/logo.png)
 
 ## Overview
 
@@ -42,7 +42,7 @@ Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan
 
 ### Wireframes
 
-[Include links to your wireframe designs]
+![Desktop Wireframe](wireframes/desktop-wireframe.png)
 
 ### Color Scheme
 
@@ -93,7 +93,7 @@ Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan
 - CSS3
 
 ### Frameworks & Libraries
-- [List any frameworks used]
+-  *None (custom HTML5 and CSS3)*
 
 ### Tools
 - Git
@@ -138,6 +138,10 @@ Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan
 3. Go to Settings > Pages
 4. Select the main branch
 5. Save and wait for the site to be published
+
+## How to View Locally
+1. Clone the repository: `git clone https://github.com/carlssonanton87/my-practise-repo.git`
+2. Open the `index.html` file in your browser.
 
 ## Credits
 

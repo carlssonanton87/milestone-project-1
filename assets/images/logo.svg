@@ -1,0 +1,10 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font: bold 48px 'Montserrat', sans-serif; fill: #9DC183; }
+    .leaf { fill: #7DA87B; }
+  </style>
+  <g transform="translate(10, 65)">
+    <path class="leaf" d="M20,0 Q40,-30 60,0 Q40,30 20,0 Z"/>
+    <text x="80" class="logo-text">Vegan Kök</text>
+  </g>
+</svg>
