@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1140" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Header -->
+  <rect x="0" y="0" width="1140" height="100" fill="#cccccc"/>
+  <text x="20" y="60" font-size="24" fill="#333333">Header</text>
+  
+  <!-- Navigation -->
+  <rect x="0" y="100" width="1140" height="50" fill="#aaaaaa"/>
+  <text x="20" y="130" font-size="18" fill="#333333">Navigation</text>
+  
+  <!-- Hero Section -->
+  <rect x="0" y="150" width="1140" height="300" fill="#dddddd"/>
+  <text x="20" y="320" font-size="24" fill="#333333">Hero Section</text>
+  
+  <!-- Content Area -->
+  <rect x="0" y="450" width="1140" height="200" fill="#eeeeee"/>
+  <text x="20" y="550" font-size="24" fill="#333333">Content Area</text>
+  
+  <!-- Footer -->
+  <rect x="0" y="650" width="1140" height="150" fill="#cccccc"/>
+  <text x="20" y="730" font-size="24" fill="#333333">Footer</text>
+</svg>
