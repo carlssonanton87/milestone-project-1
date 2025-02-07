@@ -93,12 +93,15 @@ body {
     display: block;
 }
 
+/* Mobile navigation menu active state */
 @media (min-width: 768px) {
     .nav-menu {
         display: flex;
         gap: 2rem;
     }
-
+    .nav-menu.active {
+        display: block;
+      }
     .nav-toggle {
         display: none;
     }
