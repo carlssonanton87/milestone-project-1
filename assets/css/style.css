@@ -151,7 +151,9 @@ body {
 .hero {
     min-height: 60vh;          /* Minimum height: 60% of viewport height */
     padding: 4rem 1rem;        /* Padding for spacing around content */
-    margin-top: 60px;          /* Margin to offset the fixed navigation */
+    
+     
+    /* margin-top: 60px;          Commented out for fixing gap ->  Margin to offset the fixed navigation */
     background-position: center; /* Center the background image */
     background-size: cover;    /* Cover the section with the background image */
 }
