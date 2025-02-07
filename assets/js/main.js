@@ -1,18 +1,14 @@
 // assets/js/main.js
 
-// Wait for the DOM to fully load before executing the script
+// Wait until the entire DOM is loaded.
 document.addEventListener('DOMContentLoaded', () => {
-    // Select the toggle button and navigation menu elements
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-  
-    // Check if the elements exist
-    if (navToggle && navMenu) {
-      // Add a click event listener to the toggle button
-      navToggle.addEventListener('click', () => {
-        // Toggle the 'active' class on the nav menu
-        navMenu.classList.toggle('active');
-      });
-    }
-  });
-  
+    // Select the mobile nav toggle button and the nav menu container.
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    
+    // If toggle and menu exist, add an event listener for clicks.
+    toggle?.addEventListener('click', () => {
+        // Toggle the 'active' class to show or hide the mobile menu.
+        menu.classList.toggle('active');
+    });
+});

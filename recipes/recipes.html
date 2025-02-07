@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Kök - Naturlig Matglädje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="nav-container">
+        <nav class="navbar" role="navigation">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Vegan Kök" width="120">
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#recipes">Recept</a></li>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Upptäck Naturens Smaker</h1>
+                <p class="subtitle">Växtbaserade recept för en medveten livsstil</p>
+                <a href="#recipes" class="btn">Utforska Våra Recept</a>
+            </div>
+        </section>
+
+        <section id="recipes" class="featured-recipes">
+            <div class="container">
+                <h2 class="section-title">Säsongens Favoriter</h2>
+                <div class="recipe-grid">
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="assets/images/recipes/recipe1.jpg" alt="Höstlig Gryta">
+                        </div>
+                        <div class="recipe-card-content">
+                            <h3>Höstlig Gryta</h3>
+                            <p>En värmande gryta med säsongens rotfrukter</p>
+                            <a href="#" class="btn">Visa Recept</a>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="assets/images/recipes/recipe2.jpg" alt="Krämig Svamppasta">
+                        </div>
+                        <div class="recipe-card-content">
+                            <h3>Krämig Svamppasta</h3>
+                            <p>Pasta med säsongens svamp och örter</p>
+                            <a href="#" class="btn">Visa Recept</a>
+                        </div>
+                    </article>
+
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="assets/images/recipes/recipe3.jpg" alt="Quinoasallad">
+                        </div>
+                        <div class="recipe-card-content">
+                            <h3>Quinoasallad</h3>
+                            <p>Näringsrik sallad med quinoa och rostade grönsaker</p>
+                            <a href="#" class="btn">Visa Recept</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Vår Filosofi</h2>
+                        <p>Vi tror på kraften i naturliga, växtbaserade råvaror och vill inspirera till en mer hållbar matlagning. Varje recept är noggrant utvecklat för att kombinera smak, näring och enkelhet.</p>
+                        <a href="#" class="btn">Läs Mer Om Oss</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Kontakta Oss</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Ditt Namn" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Din E-post" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" placeholder="Ditt Meddelande" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Skicka Meddelande</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Vegan Kök</h3>
+                    <p>Inspirerande växtbaserade recept för en grönare vardag</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Utforska</h4>
+                    <ul>
+                        <li><a href="#recipes">Recept</a></li>
+                        <li><a href="#about">Om Oss</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Nyhetsbrev</h4>
+                    <p>Få de senaste recepten direkt i din inkorg</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Din E-post" required>
+                        <button type="submit" class="btn">Prenumerera</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
