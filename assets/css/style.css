@@ -1,25 +1,38 @@
-/* Base styles and variables */
+/* 
+   Base Styles and Variables
+   -------------------------
+   Define CSS custom properties (variables) that are used throughout the stylesheet.
+   This allows for easy updates and consistency across the design.
+*/
 :root {
-    --primary-sage: #9DC183;
-    --secondary-mint: #C5D8C5;
-    --accent-sage: #7DA87B;
-    --background-cream: #F5F5DC;
-    --text-sage-dark: #3D5A3E;
-    --soft-olive: #8A9A5B;
-    --pastel-green: #B7D3AB;
-    --warm-neutral: #D4C4A8;
-    --spacing-unit: 1rem;
-    --border-radius: 15px;
+    --primary-sage: #9DC183;       /* Primary color used for major elements (e.g., header background) */
+    --secondary-mint: #C5D8C5;       /* Secondary accent color */
+    --accent-sage: #7DA87B;          /* Accent color for buttons and highlights */
+    --background-cream: #F5F5DC;     /* Background color for the body */
+    --text-sage-dark: #3D5A3E;       /* Default text color */
+    --soft-olive: #8A9A5B;           /* Used for footer and other elements */
+    --pastel-green: #B7D3AB;         /* Additional soft green accent */
+    --warm-neutral: #D4C4A8;         /* Warm neutral color */
+    --spacing-unit: 1rem;            /* Base spacing unit for margins and padding */
+    --border-radius: 15px;           /* Standard border radius for rounded corners */
 }
 
-/* Reset */
+/* 
+   Reset
+   -----
+   Remove default margin and padding from all elements and set box-sizing.
+*/
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Typography */
+/* 
+   Typography
+   ----------
+   Set the base font size for the document and adjust for larger screens.
+*/
 html {
     font-size: 16px;
 }
@@ -31,13 +44,17 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: var(--text-sage-dark);
-    background-color: var(--background-cream);
+    font-family: 'Montserrat', sans-serif; /* Set primary font */
+    line-height: 1.6;                        /* Improve readability */
+    color: var(--text-sage-dark);            /* Set default text color */
+    background-color: var(--background-cream); /* Set background color */
 }
 
-/* Grid System */
+/* 
+   Grid System
+   -----------
+   The .container class centers content and applies responsive max-widths.
+*/
 .container {
     width: 100%;
     padding-right: var(--spacing-unit);
@@ -70,169 +87,199 @@ body {
     }
 }
 
-/* Navigation */
-
+/* 
+   Navigation
+   ----------
+   Styles for the navigation header, including logo, toggle button, and menu.
+*/
 .nav-container {
-    position: fixed;
+    position: fixed;           /* Fix the navigation bar at the top */
     width: 100%;
-    z-index: 1000;
+    z-index: 1000;             /* Ensure it stays above other content */
     background-color: var(--primary-sage);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;             /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;       /* Vertically center items */
     padding: 1rem;
 }
 
 .nav-menu {
-    display: none;
+    display: none;             /* Hide navigation links on small screens by default */
 }
 
-/* Show the mobile navigation when active */
+/* 
+   Mobile Navigation Active State
+   When the 'active' class is added via JavaScript, the menu becomes visible.
+*/
 .nav-menu.active {
-    display: block;
-    background-color: var(--primary-sage);
-    padding: 1rem;
+    display: block;            /* Show menu when active */
+    background-color: var(--primary-sage); /* Optional background for better visibility */
+    padding: 1rem;             /* Optional padding for spacing */
 }
 
 .nav-toggle {
-    display: block;
+    display: block;            /* Show toggle button on mobile devices */
 }
 
 @media (min-width: 768px) {
     .nav-menu {
-        display: flex;
-        gap: 2rem;
+        display: flex;         /* Show menu as flex container on larger screens */
+        gap: 2rem;             /* Space between navigation items */
     }
-
     .nav-toggle {
-        display: none;
+        display: none;         /* Hide toggle button on larger screens */
     }
-
     .nav-menu li {
-        list-style: none;
+        list-style: none;      /* Remove default list styling */
     }
-
     .nav-menu a {
-        color: var(--background-cream);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
+        color: var(--background-cream); /* Link color */
+        text-decoration: none;           /* Remove underline */
+        font-weight: 500;                /* Medium font weight */
+        transition: color 0.3s ease;      /* Smooth color transition on hover */
     }
 }
 
-
-/* Hero Section */
+/* 
+   Hero Section
+   ------------
+   Styles for the hero section including background image, padding, and height.
+*/
 .hero {
-    min-height: 60vh;
-    padding: 4rem 1rem;
-    margin-top: 60px;
-    background-position: center;
-    background-size: cover;
+    min-height: 60vh;          /* Minimum height: 60% of viewport height */
+    padding: 4rem 1rem;        /* Padding for spacing around content */
+    margin-top: 60px;          /* Margin to offset the fixed navigation */
+    background-position: center; /* Center the background image */
+    background-size: cover;    /* Cover the section with the background image */
 }
 
 @media (min-width: 768px) {
     .hero {
-        min-height: 80vh;
+        min-height: 80vh;      /* Increase hero section height on larger screens */
         padding: 6rem 2rem;
     }
 }
 
-/* Recipe Grid */
+/* 
+   Recipe Grid
+   -----------
+   Define a responsive grid layout for displaying recipe cards.
+*/
 .recipe-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 1.5rem;                /* Gap between grid items */
     padding: 1rem;
 }
 
 @media (min-width: 576px) {
     .recipe-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Two columns on slightly larger screens */
     }
 }
 
 @media (min-width: 992px) {
     .recipe-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
     }
 }
 
-/* Recipe Cards */
+/* 
+   Recipe Cards
+   ------------
+   Styling for individual recipe cards including border radius and hover effects.
+*/
 .recipe-card {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+    border-radius: var(--border-radius); /* Rounded corners */
+    overflow: hidden;                    /* Ensure content doesn't spill over rounded corners */
+    transition: transform 0.3s ease;     /* Smooth transformation on hover */
 }
 
 .recipe-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px);         /* Slight lift effect on hover */
 }
 
 .recipe-image {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+    width: 100%;                         /* Image fills the width of the card */
+    aspect-ratio: 16/9;                  /* Maintain a 16:9 aspect ratio */
+    object-fit: cover;                   /* Image covers the area without distortion */
 }
 
-/* About Section */
+/* 
+   About Section
+   -------------
+   Layout and styling for the about section, with text and an image side by side.
+*/
 .about-section {
-    padding: 4rem 1rem;
+    padding: 4rem 1rem;                 /* Padding around the about section */
 }
 
 @media (min-width: 768px) {
     .about-section {
         padding: 6rem 2rem;
     }
-
     .about-content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
+        grid-template-columns: 1fr 1fr; /* Two columns: one for text, one for the image */
+        gap: 4rem;                    /* Space between columns */
+        align-items: center;          /* Vertically center the content */
     }
 }
 
-/* Contact Form */
+/* 
+   Contact Form
+   ------------
+   Styles for the contact form, ensuring the form is centered and inputs are styled.
+*/
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    max-width: 600px;                   /* Limit the form width */
+    margin: 0 auto;                     /* Center the form horizontally */
+    padding: 2rem 1rem;                 /* Padding inside the form */
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;              /* Space between form fields */
 }
 
 .form-input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--secondary-mint);
-    border-radius: var(--border-radius);
+    width: 100%;                        /* Input spans full width */
+    padding: 0.75rem;                   /* Padding inside the input */
+    border: 1px solid var(--secondary-mint); /* Border color for inputs */
+    border-radius: var(--border-radius); /* Rounded corners */
 }
 
-/* Footer */
+/* 
+   Footer
+   ------
+   Styles for the footer including background color, text color, and layout.
+*/
 .footer {
-    background-color: var(--soft-olive);
-    color: var(--background-cream);
-    padding: 3rem 1rem;
+    background-color: var(--soft-olive); /* Footer background color */
+    color: var(--background-cream);      /* Text color in the footer */
+    padding: 3rem 1rem;                  /* Padding for spacing */
 }
 
 @media (min-width: 768px) {
     .footer-content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr); /* Three columns in the footer */
+        gap: 2rem;                           /* Space between footer columns */
     }
 }
 
-/* Utilities */
+/* 
+   Utilities
+   ---------
+   Helper classes for common styles such as text alignment and margin spacing.
+*/
 .text-center {
-    text-align: center;
+    text-align: center;                   /* Center text horizontally */
 }
 
+/* Margin utility classes */
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
@@ -240,68 +287,84 @@ body {
 .mb-2 { margin-bottom: 2rem; }
 .mb-3 { margin-bottom: 3rem; }
 
-/* Buttons */
+/* 
+   Buttons
+   -------
+   Basic button styling, including padding, border radius, and hover transitions.
+*/
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 25px;                  /* Fully rounded buttons */
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;           /* Smooth transition on hover */
     border: none;
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: var(--accent-sage);
-    color: var(--background-cream);
+    background-color: var(--accent-sage); /* Primary button background */
+    color: var(--background-cream);        /* Button text color */
 }
 
 .btn-primary:hover {
-    background-color: var(--soft-olive);
+    background-color: var(--soft-olive);   /* Darker background on hover */
 }
 
-/* Recipe Detail Page */
+/* 
+   Recipe Detail Page
+   ------------------
+   Styles for the detailed recipe view.
+*/
 .recipe-detail {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    margin: 0 auto;                      /* Center the content */
+    padding: 2rem 1rem;                  /* Padding for spacing */
 }
 
 .recipe-detail img {
-    width: 100%;
-    border-radius: var(--border-radius);
-    margin-bottom: 2rem;
+    width: 100%;                         /* Image spans full width */
+    border-radius: var(--border-radius);  /* Rounded image corners */
+    margin-bottom: 2rem;                 /* Space below the image */
 }
 
 .recipe-info {
     display: grid;
-    gap: 1rem;
+    gap: 1rem;                          /* Space between info blocks */
 }
 
 @media (min-width: 768px) {
     .recipe-info {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
     }
 }
 
-/* Category Pages */
+/* 
+   Category Pages
+   --------------
+   Styling for headers on category pages.
+*/
 .category-header {
-    background-color: var(--secondary-mint);
-    padding: 4rem 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
+    background-color: var(--secondary-mint); /* Background for category header */
+    padding: 4rem 1rem;                      /* Padding for spacing */
+    text-align: center;                      /* Center the text */
+    margin-bottom: 2rem;                     /* Space below the header */
 }
 
-/* Search Component */
+/* 
+   Search Component
+   ----------------
+   Styles for the search bar component.
+*/
 .search-container {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 600px;                      /* Limit container width */
+    margin: 2rem auto;                     /* Center container */
+    padding: 0 1rem;                       /* Horizontal padding */
 }
 
 .search-input {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--secondary-mint);
-    border-radius: var(--border-radius);
+    width: 100%;                           /* Input spans full container width */
+    padding: 1rem;                         /* Internal padding */
+    border: 2px solid var(--secondary-mint); /* Border styling */
+    border-radius: var(--border-radius);   /* Rounded corners */
 }
