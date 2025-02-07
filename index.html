@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+  <!-- 
+    Meta tags defining character set and viewport for responsive design. 
+    Also includes links to Google Fonts and your main CSS file.
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vegan Kök - Naturlig Matglädje</title>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Playfair Display (headings) and Montserrat (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
@@ -13,31 +17,39 @@
     rel="stylesheet"
   >
   
-  <!-- Main CSS -->
+  <!-- Link to Main CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Header / Nav -->
-  <header class="nav-container" id="navbar">
-    <nav class="navbar" role="navigation">
-      
-      <button class="nav-toggle" aria-label="Toggle navigation">
+  <!-- 
+    Header & Navigation 
+    Contains a fixed nav bar with a toggle button for mobile screens and a nav menu.
+  -->
+  <header class="nav-container" id="navbar" role="banner" aria-label="Main Navigation">
+    <nav class="navbar" role="navigation" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul class="nav-menu">
-        <li><a href="#home">Hem</a></li>
-        <li><a href="#recipes">Recept</a></li>
-        <li><a href="#about">Om Oss</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Hem</a></li>
+        <li role="none"><a role="menuitem" href="#recipes">Recept</a></li>
+        <li role="none"><a role="menuitem" href="#about">Om Oss</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero" style="background-image: url('assets/images/hero/hero-main.jpg');">
+    <!-- 
+      Hero Section 
+      Full-height hero area with background image, main heading, subtitle, and a button.
+    -->
+    <section id="home" class="hero" 
+      style="background-image: url('assets/images/hero/hero-main.jpg');"
+      aria-label="Introduction and Welcome"
+    >
       <div class="hero-content">
         <h1>Upptäck Naturens Smaker</h1>
         <p class="subtitle">Växtbaserade recept för en medveten livsstil</p>
@@ -45,28 +57,37 @@
       </div>
     </section>
 
-    <!-- Recipes Section -->
-    <section id="recipes" class="featured-recipes">
+    <!-- 
+      Recipes Section 
+      Displays multiple recipe cards in a grid layout, each with an image, title, description, and button.
+    -->
+    <section id="recipes" class="featured-recipes" aria-labelledby="featured-recipes-title">
       <div class="container">
-        <h2 class="section-title">Säsongens Favoriter</h2>
+        <h2 id="featured-recipes-title" class="section-title">Säsongens Favoriter</h2>
+        
+        <!-- Grid container for recipe cards -->
         <div class="recipe-grid">
-           <!-- Buddha Bowl Recipe Card -->
-      <article class="recipe-card">
-        <div class="recipe-image">
-          <img 
-            src="assets/images/recipes/buddha-bowl.jpg" 
-            alt="Färgglad Buddha Bowl"
-          >
-        </div>
-        <div class="recipe-card-content">
-          <h3>Färgglad Buddha Bowl</h3>
-          <p>En näringsrik och färgsprakande bowl med fräscha grönsaker och växtbaserat protein.</p>
-          <a href="#" class="btn">Visa Recept</a>
-        </div>
-      </article>
-      
-      <article class="recipe-card">
+          
+          <!-- Buddha Bowl Recipe Card -->
+          <article class="recipe-card" aria-label="Färgglad Buddha Bowl">
             <div class="recipe-image">
+              <!-- Uses buddha-bowl.jpg as the thumbnail -->
+              <img 
+                src="assets/images/recipes/buddha-bowl.jpg" 
+                alt="Färgglad Buddha Bowl toppad med grönsaker och växtbaserat protein."
+              >
+            </div>
+            <div class="recipe-card-content">
+              <h3>Färgglad Buddha Bowl</h3>
+              <p>En näringsrik och färgsprakande bowl med fräscha grönsaker och växtbaserat protein.</p>
+              <a href="#" class="btn">Visa Recept</a>
+            </div>
+          </article>
+          
+          <!-- Höstlig Gryta Recipe Card -->
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <!-- recipe1.jpg, representing Höstlig Gryta -->
               <img src="assets/images/recipes/recipe1.jpg" alt="Höstlig Gryta">
             </div>
             <div class="recipe-card-content">
@@ -76,8 +97,10 @@
             </div>
           </article>
 
+          <!-- Krämig Svamppasta Recipe Card -->
           <article class="recipe-card">
             <div class="recipe-image">
+              <!-- recipe2.jpg, representing Krämig Svamppasta -->
               <img src="assets/images/recipes/recipe2.jpg" alt="Krämig Svamppasta">
             </div>
             <div class="recipe-card-content">
@@ -87,8 +110,10 @@
             </div>
           </article>
 
+          <!-- Quinoasallad Recipe Card -->
           <article class="recipe-card">
             <div class="recipe-image">
+              <!-- recipe3.jpg, representing Quinoasallad -->
               <img src="assets/images/recipes/recipe3.jpg" alt="Quinoasallad">
             </div>
             <div class="recipe-card-content">
@@ -101,25 +126,32 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- 
+      About Section 
+      Highlights team info and mission. Includes an image of the team.
+    -->
     <section id="about" class="about-section">
-        <div class="container">
-          <div class="about-content">
-            <div class="about-text">
-              <h2>Vårt Team</h2>
-              <p>Vi brinner för växtbaserad mat och vill dela vår passion för hälsosamma, hållbara och fantastiskt goda rätter.</p>
-              <img 
-                src="assets/images/about/team.jpg" 
-                alt="Vårt Team" 
-                width="400" 
-                height="400"
-              >
-            </div>
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Vårt Team</h2>
+            <p>Vi brinner för växtbaserad mat och vill dela vår passion för hälsosamma, hållbara och fantastiskt goda rätter.</p>
+            <!-- team.jpg displays the team photo -->
+            <img 
+              src="assets/images/about/team.jpg" 
+              alt="Vårt Team" 
+              width="400" 
+              height="400"
+            >
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    <!-- Contact Section -->
+    <!-- 
+      Contact Section 
+      Contains a form with name, email, and message fields, plus a submit button.
+    -->
     <section id="contact" class="contact-section">
       <div class="container">
         <h2 class="section-title">Kontakta Oss</h2>
@@ -139,52 +171,59 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- 
+    Footer 
+    Contains info about the site, navigational links, and newsletter subscription form.
+  -->
+  <footer class="footer" role="contentinfo" aria-label="Footer">
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Vegan Kök</h3>
-                <p>Vi inspirerar till en grönare matlagning genom enkla och näringsrika recept för en hållbar livsstil.</p>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Utforska</h4>
-                <ul>
-                    <li><a href="#recipes">Våra Recept</a></li>
-                    <li><a href="#about">Om Oss</a></li>
-                    <li><a href="#contact">Kontakta Oss</a></li>
-                    <li><a href="#terms">Villkor</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-links">
-                <h4>Kategorier</h4>
-                <ul>
-                    <li><a href="#breakfast">Frukost</a></li>
-                    <li><a href="#lunch">Lunch</a></li>
-                    <li><a href="#dinner">Middag</a></li>
-                    <li><a href="#desserts">Efterrätter</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-newsletter">
-                <h4>Håll dig Uppdaterad</h4>
-                <p>Prenumerera på vårt nyhetsbrev för att få de senaste recepten och matlagningsinspiration.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Din E-postadress" required>
-                    <button type="submit" class="btn">Prenumerera</button>
-                </form>
-            </div>
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Vegan Kök</h3>
+          <p>Vi inspirerar till en grönare matlagning genom enkla och näringsrika recept för en hållbar livsstil.</p>
         </div>
         
-        <div class="footer-bottom">
-            <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Utforska</h4>
+          <ul>
+            <li><a href="#recipes">Våra Recept</a></li>
+            <li><a href="#about">Om Oss</a></li>
+            <li><a href="#contact">Kontakta Oss</a></li>
+            <li><a href="#terms">Villkor</a></li>
+          </ul>
         </div>
-    </div>
-</footer>
 
-  <!-- Main JS -->
+        <!-- Categories (Optional) -->
+        <div class="footer-links">
+          <h4>Kategorier</h4>
+          <ul>
+            <li><a href="#breakfast">Frukost</a></li>
+            <li><a href="#lunch">Lunch</a></li>
+            <li><a href="#dinner">Middag</a></li>
+            <li><a href="#desserts">Efterrätter</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter Subscription Form -->
+        <div class="footer-newsletter">
+          <h4>Håll dig Uppdaterad</h4>
+          <p>Prenumerera på vårt nyhetsbrev för att få de senaste recepten och matlagningsinspiration.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Din E-postadress" required>
+            <button type="submit" class="btn">Prenumerera</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom Info -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS Script -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
