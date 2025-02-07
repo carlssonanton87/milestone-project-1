@@ -2,77 +2,158 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Oss - Vegan Kök</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <header class="nav-container">
-        <nav class="navbar container" role="navigation">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.svg" alt="Vegan Kök Logo" width="120">
-                </a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="recipes/index.html">Recept</a></li>
-                <li><a href="about.html">Om Oss</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Main Content -->
-    <main>
-        <section class="container mt-3">
-            <h1>Om Oss</h1>
-            <p>Vegan Kök grundades med visionen att främja en hälsosam livsstil genom växtbaserad mat. Vi tror att växtbaserad kost kan vara både näringsrik och smakrik, och vi är här för att inspirera och guida dig på din resa mot en grönare livsstil.</p>
-            <div class="about-image">
-                <img 
-                  src="images/about/team.jpg" 
-                  alt="Vårt Team" 
-                  width="400" 
-                  height="400"
-                >
-            </div>
-        </section>
+  <!-- Here, I'm specifying character set and the initial viewport to ensure
+       responsiveness on different devices. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Oss - Vegan Kök</title>
 
-        
-    </main>
-    <!-- Footer -->
-    <footer class="footer mt-3">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Vegan Kök</h3>
-                    <p>Inspirerande växtbaserade recept för alla</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Snabblänkar</h4>
-                    <ul>
-                        <li><a href="recipes/index.html">Recept</a></li>
-                        <li><a href="about.html">Om Oss</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Följ Oss</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram">Instagram</a>
-                        <a href="#" aria-label="Facebook">Facebook</a>
-                        <a href="#" aria-label="Pinterest">Pinterest</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom text-center mt-2">
-                <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
-            </div>
+  <!-- I'm pulling in Google Fonts for a cohesive, modern look. -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Linking to my main CSS file where I keep all my styling rules. -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<!-- 
+  I added the 'about-page' class to body so I can scope any unique styles
+  specifically to this page, preventing conflicts with the rest of the site.
+-->
+<body class="about-page">
+
+  <!-- 
+    The header contains a fixed navigation bar that I've been using site-wide.
+    It's consistent with the rest of my pages and allows for easy nav toggling on mobile.
+  -->
+  <header class="nav-container">
+    <nav class="navbar container" role="navigation">
+      
+      <!-- 
+        This button triggers the mobile menu. I decided to hide it on larger screens,
+        controlled by my CSS media queries.
+      -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- 
+        The nav-menu is a list of links to major site sections (or pages). 
+        My JS file toggles the 'active' class to show/hide it on mobile.
+      -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="recipes/index.html">Recept</a></li>
+        <li><a href="about.html">Om Oss</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+      This section acts as a mini-hero for the About page. 
+      The extra top padding is set in CSS so it won't hide behind the fixed nav bar.
+    -->
+    <section class="about-hero-section">
+      <div class="container about-hero-content">
+        <h1>Om Oss</h1>
+        <p>
+          Välkommen till Vegan Kök! Vi tror på kraften i växtbaserad mat och vill dela vår passion
+          för enkla, hälsosamma och fantastiskt goda rätter. 
+        </p>
+      </div>
+    </section>
+
+    <!-- 
+      The about-team section introduces my team with an image and some text.
+      I've set up a '.team-row' to place the image alongside a short description.
+    -->
+    <section class="about-team container mt-3">
+      <div class="team-row">
+        <!-- 
+          This <div> holds the team image. 
+          I gave it a class so I can style it specifically without affecting other images.
+        -->
+        <div class="team-image">
+          <img 
+            src="assets/images/about/team.jpg" 
+            alt="Vårt Team" 
+            width="500"
+          >
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+        <!-- 
+          This <div> holds the team's textual introduction, with a subheading and a paragraph
+          describing who we are and what we believe in.
+        -->
+        <div class="team-text">
+          <h2>Vårt Team</h2>
+          <p>
+            Vårt team består av matälskare och näringsexperter som brinner för att sprida kunskap 
+            om växtbaserad kost. Vi tror på att matlagning ska vara rolig, kreativ och hållbar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      about-values section: I list our guiding principles here in a bullet format
+      so visitors can see our priorities at a glance.
+    -->
+    <section class="about-values container mt-3 mb-3">
+      <h3>Våra Värderingar</h3>
+      <ul>
+        <li>
+          <strong>Hållbarhet:</strong> Vi vill minska klimatavtrycket genom växtbaserade alternativ.
+        </li>
+        <li>
+          <strong>Hälsa:</strong> Näringstäta och balanserade recept är kärnan i allt vi gör.
+        </li>
+        <li>
+          <strong>Gemenskap:</strong> Matlagning är roligare när den delas, och vi älskar att höra från våra användare.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- 
+    The site-wide footer is reused across pages. 
+    It contains quick links, social links, and a bottom area for copyright.
+  -->
+  <footer class="footer mt-3">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Vegan Kök</h3>
+          <p>Inspirerande växtbaserade recept för alla</p>
+        </div>
+        <div class="footer-links">
+          <h4>Snabblänkar</h4>
+          <ul>
+            <li><a href="recipes/index.html">Recept</a></li>
+            <li><a href="about.html">Om Oss</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Följ Oss</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Pinterest">Pinterest</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-2">
+        <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- main.js includes the mobile nav toggle script. -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
