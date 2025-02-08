@@ -353,6 +353,34 @@ h1 {
   color: white;
 }
 
+/* 
+  Hero Button Enhancement
+  I'm targeting the .btn specifically within the .hero so it doesn't affect 
+  buttons site-wide unless they're also in the hero area.
+*/
+.hero .btn {
+  /* Using my accent color to make the button pop. */
+  background-color: var(--accent-color);
+  color: #fff; 
+  border: 1px solid transparent;
+  font-weight: 600; 
+  padding: 1rem 2rem; 
+  transition: all 0.3s ease;
+  
+}
+
+/* 
+  On hover, I'll invert it to a light background with the accent color text. 
+  This provides a clear feedback to the user.
+*/
+.hero .btn:hover {
+  background-color: #fff;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  
+}
+
+
 /*****************************************************
  * ABOUT PAGE
  * This includes special hero section and team layout
@@ -431,6 +459,74 @@ h1 {
 .about-values li {
   margin-bottom: 1rem;
 }
+
+
+
+/* 
+  About Home Section
+  I've named it .about-home to specifically style the 
+  about portion on the main page without clashing with 
+  the dedicated about.html styles.
+*/
+.about-home {
+  /* A subtle background color or pattern can help it stand out.
+     Feel free to change #f9f9f9 to something that suits your design. */
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  border-radius: 8px; /* Slight rounding for a softer look */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-top: 2rem; /* Some extra space above the section */
+}
+
+/* 
+  Using .about-home-content as a flex container
+  so I can place text and image side by side on larger devices.
+*/
+.about-home-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center; /* Vertically center the items */
+}
+
+/* 
+  The text column:
+  I ensure it can shrink or grow appropriately.
+*/
+.about-home-text {
+  flex: 1;
+  min-width: 300px; /* So the text doesn't become too narrow */
+}
+
+/* 
+  The image column:
+  Center the image horizontally, and let it scale down if needed.
+*/
+.about-home-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-home-image img {
+  max-width: 100%;
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+}
+
+/* 
+  On mobile (under 768px), 
+  I want the text and image to stack vertically 
+  rather than staying side by side.
+*/
+@media (max-width: 768px) {
+  .about-home {
+    padding: 2rem 1rem; /* Slightly reduce padding on smaller screens */
+  }
+  .about-home-content {
+    flex-direction: column;
+  }
+}
+
 
 /*****************************************************
  * CONTACT SECTION
