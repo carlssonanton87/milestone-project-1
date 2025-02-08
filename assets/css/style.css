@@ -210,6 +210,63 @@
     text-align: center;
   }
   
+/* 
+  Dedicated styles for the recipe detail hero section.
+  I'm using a background image with a slight overlay
+  and centering the text.
+*/
+.recipe-detail-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust for your preference */
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.recipe-detail-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+.recipe-detail-content {
+  position: relative; /* So it stays above the overlay. */
+  color: #fff;
+  padding: 2rem;
+  max-width: 700px;
+}
+.recipe-detail-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 
+  .recipe-detail is the container for ingredients/instructions section.
+*/
+.recipe-detail {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Layout for the info articles (Ingredients & Instructions) */
+.recipe-info {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .recipe-info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
   /* Generic Button Styles */
   .btn {
     display: inline-block;

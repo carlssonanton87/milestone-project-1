@@ -1,0 +1,110 @@
+<!-- buddha-bowl.html -->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!-- Setting up character encoding and a responsive viewport. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Färgglad Buddha Bowl - Vegan Kök</title>
+  <!-- Loading my fonts and main stylesheet. -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- 
+    Reusing the existing nav-container for consistent site-wide navigation.
+    I'm linking back to index.html for "Hem" and referencing about.html, contact.html, etc.
+  -->
+  <header class="nav-container">
+    <nav class="navbar container" role="navigation">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../assets/images/logo.svg" alt="Vegan Kök Logo" width="120">
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Hem</a></li>
+        <li><a href="index.html">Recept</a></li>
+        <li><a href="../about.html">Om Oss</a></li>
+        <li><a href="../contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+      A dedicated hero or header section for the Buddha Bowl.
+      I'm pulling in a larger hero image or the same thumbnail if desired.
+    -->
+    <section class="recipe-detail-hero" style="background-image: url('../assets/images/recipes/buddha-bowl.jpg');">
+      <div class="recipe-detail-content">
+        <h1>Färgglad Buddha Bowl</h1>
+        <p class="subtitle">
+          En näringsrik och färgsprakande bowl fylld med grönsaker och växtbaserat protein.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main recipe detail area: includes ingredients, instructions, etc. -->
+    <section class="recipe-detail container mt-3">
+      <!-- 
+        I'm breaking down the recipe into an 'Ingredients' and 'Instructions' layout. 
+        This can be styled or structured to match your design preferences.
+      -->
+      <div class="recipe-info">
+        <article>
+          <h2>Ingredienser</h2>
+          <ul>
+            <li>1 dl quinoa</li>
+            <li>1 morot, strimlad</li>
+            <li>1/2 gurka, skivad</li>
+            <li>1 avokado, skivad</li>
+            <li>1 dl kikärter (tillagade)</li>
+            <li>1 msk olivolja</li>
+            <li>1 tsk sojasås</li>
+            <li>En nypa salt och peppar</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>Instruktioner</h2>
+          <ol>
+            <li>Koka quinoan enligt anvisningarna på förpackningen.</li>
+            <li>Förbered grönsakerna genom att skiva och strimla dem i önskad storlek.</li>
+            <li>Blanda kikärtorna med olivolja och sojasås i en skål.</li>
+            <li>Fördela quinoa, grönsaker och kikärtor i en skål.</li>
+            <li>Toppa med salt, peppar och eventuellt extra sås eller dressing.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer for site-wide consistency -->
+  <footer class="footer mt-3">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Vegan Kök</h3>
+          <p>Inspirerande växtbaserade recept för alla</p>
+        </div>
+        <!-- Additional footer columns, if needed -->
+      </div>
+      <div class="footer-bottom text-center mt-2">
+        <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Linking the main.js for nav toggle functionality. -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
