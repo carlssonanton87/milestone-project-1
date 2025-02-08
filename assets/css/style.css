@@ -1,224 +1,287 @@
+/*****************************************************
+ * GLOBAL VARIABLES
+ * In these variables, I'm defining my main color palette,
+ * spacing, and any special values like nav heights or backgrounds.
+ *****************************************************/
+ :root {
+  --primary-sage: #3C4A3E;            /* Dark sage color (footer, etc.) */
+  --secondary-mint: #A4B494;          /* Soft mint accent */
+  --text-dark: #2C2C2C;               /* Main text color */
+  --background-light: #FAFAF2;        /* Site background */
+  --accent-color: #8B9D83;            /* Additional accent color */
+  --overlay-light: rgba(255, 255, 255, 0.95); /* For overlays, nav backgrounds, etc. */
+
+  --spacing-lg: clamp(4rem, 8vw, 8rem); 
+  --spacing-md: clamp(2rem, 4vw, 4rem);
+
+  /* Navigation overrides */
+  --nav-height: 80px;
+  --nav-background: rgba(255, 255, 255, 0.98);
+  --nav-text: #333;
+  --nav-hover: #9DC183;
+}
+
+/*****************************************************
+ * BASE STYLES
+ * Setting up body styling, fonts, and default heading styles.
+ *****************************************************/
+body {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  overflow-x: hidden;
+  margin: 0; /* Removing default body margin for a cleaner layout */
+}
+
+/* Using 'Playfair Display' for headings to create an elegant look. */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+/* My main hero heading style. */
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* .section-title is used for sub-section headings like "Recept" or "Kontakt." */
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+/*****************************************************
+ * NAVIGATION (FIXED TOP)
+ * I'm creating a fixed nav container with a blurred background 
+ * and a little border at the bottom.
+ *****************************************************/
+.nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-background);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* The .navbar centers content and respects a max width. */
+.navbar {
+  height: var(--nav-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* The nav menu is displayed horizontally on desktop. */
+.nav-menu {
+  display: flex;
+  gap: clamp(2rem, 4vw, 4rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* I like this underlining hover effect for links. */
+.nav-menu a {
+  color: var(--nav-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+/* Scale the underline on hover. */
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--nav-hover);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+
+/*****************************************************
+ * NAV TOGGLE (MOBILE)
+ * Hidden on larger screens, appears on smaller ones.
+ *****************************************************/
+.nav-toggle {
+  display: none;
+}
+
 /* 
-  Global Variables 
-  Define your primary and secondary colors, background, text, etc.
+  For screens up to 768px, the toggle shows, and the nav menu 
+  transforms into a vertical overlay when active.
 */
-:root {
-    --primary-sage: #3C4A3E;
-    --secondary-mint: #A4B494;
-    --text-dark: #2C2C2C;
-    --background-light: #FAFAF2;
-    --accent-color: #8B9D83;
-    --overlay-light: rgba(255, 255, 255, 0.95);
-  
-    --spacing-lg: clamp(4rem, 8vw, 8rem);
-    --spacing-md: clamp(2rem, 4vw, 4rem);
-  
-    /* Navigation overrides */
-    --nav-height: 80px;
-    --nav-background: rgba(255, 255, 255, 0.98);
-    --nav-text: #333;
-    --nav-hover: #9DC183;
-  }
-  
-  /* Base Styles */
-  body {
-    background-color: var(--background-light);
-    color: var(--text-dark);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.8;
-    overflow-x: hidden;
-    margin: 0; /* Remove default body margin */
-  }
-  
-  /* Basic Headings with Playfair Display */
-  h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    margin-top: 0;
-  }
-  
-  /* Hero heading styling */
-  h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Section Title (e.g., for recipes, about, contact) */
-  .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    text-align: center;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  /* Navigation Container (fixed at top) */
-  .nav-container {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background: var(--nav-background);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Center nav content inside navbar */
-  .navbar {
-    height: var(--nav-height);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  
-  /* Nav menu for desktop */
-  .nav-menu {
-    display: flex;
-    gap: clamp(2rem, 4vw, 4rem);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Nav menu links (hover effect with underline) */
-  .nav-menu a {
-    color: var(--nav-text);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    font-weight: 500;
-    position: relative;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-  }
-  
-  /* Underline effect on hover */
-  .nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--nav-hover);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  .nav-menu a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  /* Mobile toggle button hidden on desktop */
+@media (max-width: 768px) {
   .nav-toggle {
-    display: none;
+    display: block;
+    position: absolute;
+    right: 2rem;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
   }
-  
-  /* Hero Section (full viewport height, background image) */
-  .hero {
-    height: 100vh;
-    display: flex;
+  .nav-toggle span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--nav-text);
+    transition: 0.3s;
+  }
+  .nav-toggle span:first-child {
+    top: 0;
+  }
+  .nav-toggle span:last-child {
+    bottom: 0;
+  }
+
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background: var(--nav-background);
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-  }
-  
-/* Darken the hero overlay for better contrast */
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-  }
-  
-  /* Increase brightness on text for hero content */
-  .hero-content {
-    position: relative;
-    color: #f1f1f1; /* More pronounced white */
-    max-width: 800px;
-    padding: 2rem;
-  }
-  
-  /* Subtitles in hero section */
-  .subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    margin-bottom: 2rem;
-    opacity: 0.9;
-  }
-  
-  /* Featured Recipes: container for multiple recipe cards */
-  .featured-recipes .container {
-    margin-top: var(--spacing-md);
-  }
-  
-  /* Recipe Grid (responsive) */
-  .recipe-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    padding: var(--spacing-md);
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  
-  /* Individual recipe card styling */
-  .recipe-card {
-    position: relative;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    gap: 2rem;
+    transform: translateX(100%);
     transition: transform 0.3s ease;
   }
-  
-  /* Lift effect on hover */
-  .recipe-card:hover {
-    transform: translateY(-10px);
+  .nav-menu.active {
+    transform: translateX(0);
   }
-  
-  /* Container for the recipe image */
-  .recipe-image {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 16/9;
-  }
-  
-  /* Smooth zoom effect on card image */
-  .recipe-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-  .recipe-card:hover .recipe-image img {
-    transform: scale(1.1);
-  }
-  
-  /* Card content area: title, description, and button */
-  .recipe-card-content {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-/* 
-  Dedicated styles for the recipe detail hero section.
-  I'm using a background image with a slight overlay
-  and centering the text.
-*/
+}
+
+/*****************************************************
+ * HERO SECTION (HOME PAGE)
+ * Occupies full viewport height, with a background image 
+ * and a dark overlay for contrast.
+ *****************************************************/
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Adding a stronger overlay to ensure text readability. */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+.hero-content {
+  position: relative; 
+  color: #f1f1f1; /* A more pronounced white for text. */
+  max-width: 800px;
+  padding: 2rem;
+}
+
+/* Sub-headings or subtitles in the hero. */
+.subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/*****************************************************
+ * FEATURED RECIPES
+ * Contains a grid of recipe cards, each with an image,
+ * text, and a button.
+ *****************************************************/
+.featured-recipes .container {
+  margin-top: var(--spacing-md);
+}
+
+/* Responsive grid for recipes. */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  padding: var(--spacing-md);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Each card is elevated with a shadow and lifts on hover. */
+.recipe-card {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.recipe-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Maintains a 16:9 aspect ratio for consistent image sizing. */
+.recipe-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.recipe-card:hover .recipe-image img {
+  transform: scale(1.1);
+}
+
+.recipe-card-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+/*****************************************************
+ * RECIPE DETAILS PAGE
+ * Styles for a more in-depth recipe detail, including 
+ * a smaller hero and a section for ingredients/instructions.
+ *****************************************************/
+/* A smaller hero for the recipe detail page. */
 .recipe-detail-hero {
   position: relative;
   width: 100%;
-  height: 50vh; /* Adjust for your preference */
+  height: 50vh;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -236,7 +299,7 @@
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 .recipe-detail-content {
-  position: relative; /* So it stays above the overlay. */
+  position: relative;
   color: #fff;
   padding: 2rem;
   max-width: 700px;
@@ -247,7 +310,7 @@
 }
 
 /* 
-  .recipe-detail is the container for ingredients/instructions section.
+  Main container for the detailed ingredients and instructions. 
 */
 .recipe-detail {
   padding: 2rem 1rem;
@@ -255,7 +318,7 @@
   margin: 0 auto;
 }
 
-/* Layout for the info articles (Ingredients & Instructions) */
+/* Splitting the info into two columns on larger screens. */
 .recipe-info {
   display: grid;
   gap: 2rem;
@@ -266,345 +329,287 @@
   }
 }
 
+/*****************************************************
+ * BUTTON
+ * A simple, reusable button with an uppercase style 
+ * and a subtle hover effect.
+ *****************************************************/
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--text-dark);
+  color: white;
+}
 
-  /* Generic Button Styles */
-  .btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    color: var(--text-dark);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.9rem;
-    border: 1px solid currentColor;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    background: transparent;
-    cursor: pointer;
-  }
-  .btn:hover {
-    background-color: var(--text-dark);
-    color: white;
-  }
-  
-  /* About Section: includes team info */
-  /* About Page Hero */
+/*****************************************************
+ * ABOUT PAGE
+ * This includes special hero section and team layout
+ * to avoid interfering with the main page's hero styles.
+ *****************************************************/
 .about-hero {
-    background-color: #f4f4f4; /* or use a subtle background image if you prefer */
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-  
-  .about-hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .about-hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Team Row: side-by-side layout on larger screens */
-  .team-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .team-image img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  .team-text {
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  /* Additional spacing & layout for about-values */
-  /* 
-  ABOUT PAGE SPECIFIC STYLES 
-  Using .about-page or .about-hero-section to avoid conflicts with main page hero 
-*/
+  background-color: #f4f4f4; /* Subtle background for about hero */
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-/* Ensure the hero section isn't hidden behind the fixed nav */
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.team-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.team-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* 
+  I scope these about-page styles with .about-page 
+  if I want them to apply only when <body> has that class.
+*/
 .about-page .about-hero-section {
-    /* Add top padding or margin to offset the fixed navbar */
-    padding-top: 6rem; /* Adjust to match your nav height */
-    padding-bottom: 2rem;
-    background-color: #fdfdf8; /* Subtle background color */
-    text-align: center;
-  }
-  
-  /* Container for the hero text */
-  .about-hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Style the H1 so it's distinct */
-  .about-hero-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* .team-row to arrange image & text side-by-side on larger screens */
-  .about-page .team-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .about-page .team-image img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  /* Enough space for the text column */
-  .about-page .team-text {
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  /* Values Section */
-  .about-values {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
-  
-  .about-values h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-values ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .about-values li {
-    margin-bottom: 1rem;
-  }
-  
-  
-  
-  /* Contact Section: form with text, email, and message fields */
-  .contact-section {
-    padding: var(--spacing-md) 1rem;
-  }
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  .form-input {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--accent-color);
-    background: transparent;
-    transition: all 0.3s ease;
-  }
-  .form-input:focus {
-    outline: none;
-    border-color: var(--text-dark);
-    background: rgba(255,255,255,0.1);
-  }
-  
-  /* Footer: includes info, links, newsletter, etc. */
-  .footer {
-    background-color: var(--primary-sage);
-    color: var(--background-light);
-    padding: clamp(4rem, 8vw, 8rem) 2rem 2rem;
-    position: relative;
-  }
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.2) 50%,
-      transparent 100%
-    );
-  }
+  padding-top: 6rem; 
+  padding-bottom: 2rem;
+  background-color: #fdfdf8; 
+  text-align: center;
+}
+.about-page .team-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.about-page .team-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.about-page .team-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Values Section styling */
+.about-values {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.about-values h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about-values ul {
+  list-style: none;
+  padding: 0;
+}
+.about-values li {
+  margin-bottom: 1rem;
+}
+
+/*****************************************************
+ * CONTACT SECTION
+ * My form styling for contact on either the main page 
+ * or a dedicated contact.html.
+ *****************************************************/
+.contact-section {
+  padding: var(--spacing-md) 1rem;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--accent-color);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--text-dark);
+  background: rgba(255,255,255,0.1);
+}
+
+/*****************************************************
+ * FOOTER
+ * Includes links, newsletter form, and bottom text.
+ *****************************************************/
+.footer {
+  background-color: var(--primary-sage);
+  color: var(--background-light);
+  padding: clamp(4rem, 8vw, 8rem) 2rem 2rem;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+}
+.footer-info p {
+  line-height: 1.8;
+  opacity: 0.9;
+  max-width: 300px;
+}
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: var(--background-light);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer-links a:hover::after {
+  width: 100%;
+}
+.footer-newsletter {
+  max-width: 400px;
+}
+.footer-newsletter h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.newsletter-form input {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--background-light);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--background-light);
+  background: rgba(255, 255, 255, 0.15);
+}
+.newsletter-form .btn {
+  border-color: var(--background-light);
+  color: var(--background-light);
+}
+.newsletter-form .btn:hover {
+  background-color: var(--background-light);
+  color: var(--primary-sage);
+}
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-bottom p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/*****************************************************
+ * RESPONSIVE TWEAKS
+ * Additional adjustments for narrow screens.
+ *****************************************************/
+@media (max-width: 768px) {
   .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .footer-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    font-family: 'Playfair Display', serif;
-  }
-  .footer-info p {
-    line-height: 1.8;
-    opacity: 0.9;
-    max-width: 300px;
-  }
-  .footer-links h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-  }
-  .footer-links li {
-    margin-bottom: 1rem;
-  }
-  .footer-links a {
-    color: var(--background-light);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  .footer-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -4px;
-    left: 0;
-    background-color: currentColor;
-    transition: width 0.3s ease;
-  }
-  .footer-links a:hover {
-    opacity: 1;
-  }
-  .footer-links a:hover::after {
-    width: 100%;
+    gap: 3rem;
   }
   .footer-newsletter {
-    max-width: 400px;
+    max-width: 100%;
   }
-  .footer-newsletter h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
+}
+
+/*****************************************************
+ * OPTIONAL ANIMATIONS
+ * Example fadeUp for elements that appear as user scrolls.
+ *****************************************************/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .newsletter-form input {
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--background-light);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  .newsletter-form input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  .newsletter-form input:focus {
-    outline: none;
-    border-color: var(--background-light);
-    background: rgba(255, 255, 255, 0.15);
-  }
-  .newsletter-form .btn {
-    border-color: var(--background-light);
-    color: var(--background-light);
-  }
-  .newsletter-form .btn:hover {
-    background-color: var(--background-light);
-    color: var(--primary-sage);
-  }
-  .footer-bottom {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .footer-bottom p {
-    opacity: 0.8;
-    font-size: 0.9rem;
-  }
-  
-  /* Responsive tweaks for screens up to 768px wide */
-  @media (max-width: 768px) {
-    .footer-content {
-      gap: 3rem;
-    }
-    .footer-newsletter {
-      max-width: 100%;
-    }
-  }
-  
-  /* Mobile Nav Toggle Setup (for 768px and below) */
-  @media (max-width: 768px) {
-    .nav-toggle {
-      display: block;
-      position: absolute;
-      right: 2rem;
-      width: 30px;
-      height: 20px;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-    .nav-toggle span {
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: var(--nav-text);
-      transition: 0.3s;
-    }
-    .nav-toggle span:first-child {
-      top: 0;
-    }
-    .nav-toggle span:last-child {
-      bottom: 0;
-    }
-    .nav-menu {
-      display: none;
-      position: fixed;
-      top: var(--nav-height);
-      left: 0;
-      width: 100%;
-      height: calc(100vh - var(--nav-height));
-      background: var(--nav-background);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-    }
-    .nav-menu.active {
-      transform: translateX(0);
-    }
-  }
-  
-  /* Animations (optional example) */
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .fade-up {
-    animation: fadeUp 1s ease forwards;
-  }
-  
+}
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
