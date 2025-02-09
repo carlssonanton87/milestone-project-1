@@ -1,0 +1,112 @@
+<!-- Example: hostlig-gryta.html -->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!-- I'm setting the basics: char encoding, viewport, title, and linking fonts + CSS. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Höstlig Gryta - Vegan Kök</title>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- 
+    Navigation:
+    I’m using the same nav structure as buddha-bowl.html,
+    just linking back to index.html or recipes/index.html 
+    for a consistent user experience.
+  -->
+  <header class="nav-container">
+    <nav class="navbar container" role="navigation">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../assets/images/logo.svg" alt="Vegan Kök Logo" width="120">
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Hem</a></li>
+        <li><a href="index.html">Recept</a></li>
+        <li><a href="../about.html">Om Oss</a></li>
+        <li><a href="../contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+      Here is my hero for the recipe detail, 
+      referencing the actual image for Höstlig Gryta.
+    -->
+    <section 
+      class="recipe-detail-hero" 
+      style="background-image: url('../assets/images/recipes/recipe1.jpg');"
+    >
+      <div class="recipe-detail-content">
+        <h1>Höstlig Gryta</h1>
+        <p class="subtitle">
+          En värmande, mustig gryta med rotfrukter och kryddiga smaker 
+          för kyliga dagar.
+        </p>
+      </div>
+    </section>
+
+    <!-- 
+      The main recipe detail container with ingredients & instructions, 
+      same as buddha-bowl structure but updated for Höstlig Gryta.
+    -->
+    <section class="recipe-detail container mt-3">
+      <div class="recipe-info">
+        <article>
+          <h2>Ingredienser</h2>
+          <ul>
+            <li>1 lök, hackad</li>
+            <li>2 morötter, skivade</li>
+            <li>2 potatisar, tärnade</li>
+            <li>1 palsternacka, skivad</li>
+            <li>2 dl grönsaksbuljong</li>
+            <li>1 tsk timjan</li>
+            <li>1 msk tomatpuré</li>
+            <li>Salt & peppar</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Instruktioner</h2>
+          <ol>
+            <li>Fräs lök och morötter i lite olja tills de mjuknar.</li>
+            <li>Tillsätt palsternacka och potatis, låt dem brynas lätt.</li>
+            <li>Rör ner tomatpuré, timjan och buljong.</li>
+            <li>Låt grytan småkoka i cirka 20-25 minuter, tills rotfrukterna är mjuka.</li>
+            <li>Smaka av med salt och peppar innan servering.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- My site-wide footer for consistency. -->
+  <footer class="footer mt-3">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Vegan Kök</h3>
+          <p>Inspirerande växtbaserade recept för alla</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-2">
+        <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

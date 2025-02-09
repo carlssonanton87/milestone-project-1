@@ -1,0 +1,111 @@
+<!-- quinoasallad.html -->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <!-- Setting up character encoding and a responsive viewport. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quinoasallad - Vegan Kök</title>
+  
+  <!-- Linking the fonts (Playfair Display & Montserrat) and main stylesheet for site-wide styling. -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- 
+    Using the standard nav-container from my site. 
+    The navbar includes a logo, a mobile toggle, and links to main sections or pages.
+  -->
+  <header class="nav-container">
+    <nav class="navbar container" role="navigation">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../assets/images/logo.svg" alt="Vegan Kök Logo" width="120">
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Hem</a></li>
+        <!-- Link back to your recipe index if you have one -->
+        <li><a href="index.html">Recept</a></li>
+        <li><a href="../about.html">Om Oss</a></li>
+        <li><a href="../contact.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+      Hero section specifically for Quinoasallad, 
+      with a background image from recipe3.jpg
+    -->
+    <section 
+      class="recipe-detail-hero" 
+      style="background-image: url('../assets/images/recipes/recipe3.jpg');"
+    >
+      <div class="recipe-detail-content">
+        <h1>Quinoasallad</h1>
+        <p class="subtitle">
+          En lätt och näringsrik sallad med quinoa, rostade grönsaker och fräscha smaker.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main recipe detail area for ingredients and instructions -->
+    <section class="recipe-detail container mt-3">
+      <div class="recipe-info">
+        <article>
+          <h2>Ingredienser</h2>
+          <ul>
+            <li>2 dl quinoa</li>
+            <li>1 paprika, tärnad</li>
+            <li>1 zucchini, skivad</li>
+            <li>1 rödlök, skivad</li>
+            <li>1 msk olivolja</li>
+            <li>1 tsk balsamvinäger</li>
+            <li>En nypa salt och peppar</li>
+            <li>Färska örter (t.ex. basilika eller persilja)</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>Instruktioner</h2>
+          <ol>
+            <li>Koka quinoan enligt anvisningarna på förpackningen. Låt svalna något.</li>
+            <li>Rosta paprika, zucchini och rödlök i ugnen med lite olivolja och salt i ca 15 minuter på 200°C.</li>
+            <li>Blanda den kokta quinoan med de rostade grönsakerna i en stor salladsskål.</li>
+            <li>Ringla över balsamvinäger och olivolja efter smak. Tillsätt örter.</li>
+            <li>Rör om försiktigt och smaka av med salt och peppar innan servering.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusing my site-wide footer for consistency. -->
+  <footer class="footer mt-3">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Vegan Kök</h3>
+          <p>Inspirerande växtbaserade recept för alla</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-2">
+        <p>&copy; 2024 Vegan Kök. Alla rättigheter reserverade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS for navigation toggle on mobile. -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
