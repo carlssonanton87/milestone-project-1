@@ -1,14 +1,19 @@
 // assets/js/main.js
 
 // Wait until the entire DOM is loaded.
+// main.js
 document.addEventListener('DOMContentLoaded', () => {
-    // Select the mobile nav toggle button and the nav menu container.
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-menu');
-    
-    // If toggle and menu exist, add an event listener for clicks.
-    toggle?.addEventListener('click', () => {
-        // Toggle the 'active' class to show or hide the mobile menu.
-        menu.classList.toggle('active');
-    });
-});
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+  
+        // (Optional) For accessibility, toggle aria-expanded:
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+        navToggle.setAttribute('aria-expanded', !expanded);
+      });
+    }
+  });
+  
