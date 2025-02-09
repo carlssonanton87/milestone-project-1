@@ -2,23 +2,32 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+    <!-- 
+      Specifying character encoding and viewport for responsive design.
+      Linking Google Fonts (Montserrat) and my main stylesheet.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Vegan Kök</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" 
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- 
+      Header + Navigation
+      I'm reusing the same nav-container and navbar classes from the rest of my site
+      so the menu is consistent everywhere.
+    -->
     <header class="nav-container">
         <nav class="navbar container" role="navigation">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.svg" alt="Vegan Kök Logo" width="120">
-                </a>
-            </div>
+            
+            <!-- nav-toggle is for mobile devices (hamburger icon). -->
             <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-menu">
+                <!-- Basic site-wide navigation links. -->
                 <li><a href="index.html">Hem</a></li>
                 <li><a href="recipes/index.html">Recept</a></li>
                 <li><a href="about.html">Om Oss</a></li>
@@ -26,29 +35,69 @@
             </ul>
         </nav>
     </header>
+
     <!-- Main Content -->
     <main>
+        <!-- 
+          Contact Section:
+          A heading explains that this page is for user inquiries.
+          I prompt the user to fill a simple form for questions or comments.
+        -->
         <section class="container mt-3">
             <h1>Kontakt</h1>
-            <p>Har du frågor eller kommentarer? Fyll i formuläret nedan så återkommer vi till dig så snart som möjligt.</p>
+            <p>
+              Har du frågor eller kommentarer? Fyll i formuläret nedan så återkommer vi 
+              till dig så snart som möjligt.
+            </p>
+            <!-- 
+              The contact-form includes fields for name, email, and message.
+              I added labels for each input to ensure accessibility.
+            -->
             <form class="contact-form mt-2">
                 <div class="form-group">
                     <label for="name">Namn</label>
-                    <input type="text" id="name" class="form-input" placeholder="Ditt namn" required>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      class="form-input" 
+                      placeholder="Ditt namn" 
+                      required
+                    >
                 </div>
                 <div class="form-group">
                     <label for="email">E-post</label>
-                    <input type="email" id="email" class="form-input" placeholder="Din e-postadress" required>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      class="form-input" 
+                      placeholder="Din e-postadress" 
+                      required
+                    >
                 </div>
                 <div class="form-group">
                     <label for="message">Meddelande</label>
-                    <textarea id="message" class="form-input" placeholder="Ditt meddelande" required></textarea>
+                    <textarea 
+                      id="message" 
+                      class="form-input" 
+                      placeholder="Ditt meddelande" 
+                      required
+                    ></textarea>
                 </div>
+                <!-- 
+                  The primary CTA button to submit the form.
+                  I used .btn .btn-primary from my stylesheet if it exists, 
+                  otherwise .btn-primary indicates a main action.
+                -->
                 <button type="submit" class="btn btn-primary">Skicka</button>
             </form>
         </section>
     </main>
-    <!-- Footer -->
+
+    <!-- 
+      Footer:
+      Same footer structure as the rest of my site, providing quick links, 
+      social media, and basic info about Vegan Kök.
+    -->
     <footer class="footer mt-3">
         <div class="container">
             <div class="footer-content">
@@ -78,6 +127,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- 
+      main.js handles my mobile nav toggle and potentially other minor scripts.
+    -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
