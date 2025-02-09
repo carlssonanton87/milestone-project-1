@@ -4,7 +4,12 @@
 
 ## Overview
 
-Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan recipes. Our mission is to inspire and simplify plant-based cooking for everyone. The site is built using **custom HTML5, CSS3, and minimal JavaScript**, ensuring an accessible, lightweight, and responsive experience across all devices.
+This project is the **first of four Milestone Projects** for the **Full Stack Developer** course at The Code Institute. 
+Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan recipes. My mission is to inspire and simplify plant-based cooking for everyone. The site is built using **custom HTML5, CSS3, and minimal JavaScript**, ensuring an accessible, lightweight, and responsive experience across all devices.
+
+Here is a quick preview of how the site looks on various screen sizes:
+
+![Responsive Screens](images/responsive-screens.png)
 
 https://carlssonanton87.github.io/my-practise-repo/
 
@@ -49,7 +54,7 @@ https://carlssonanton87.github.io/my-practise-repo/
 4. **Curious Food Lover:** As a curious food lover, I want to explore and learn more about vegan cooking.
 
 ### UX Design Rationale
-Our design decisions are rooted in a user-centric approach:
+My design decisions are rooted in a user-centric approach:
 
 - **User-Focused Layout:**  
   A clean, intuitive structure ensures users quickly locate recipes and understand navigation without distraction.
@@ -58,10 +63,10 @@ Our design decisions are rooted in a user-centric approach:
   Early wireframes guided the placement of essential elements like the header, hero section, content areas, and footer for a smooth user journey across devices.
 
 - **Accessibility & Readability:**  
-  We prioritize clear typography, sufficient color contrast, and logical content structure to enhance accessibility (including ARIA attributes and descriptive alt text).
+  I prioritized clear typography, sufficient color contrast, and logical content structure to enhance accessibility (including ARIA attributes and descriptive alt text).
 
 - **Iterative Design Process:**  
-  Based on user feedback and testing, we continuously refine the layout, improving the user experience over time.
+  Based on user feedback and testing, i continuously refine the layout, improving the user experience over time.
 
 ---
 
@@ -176,7 +181,7 @@ These wireframes were created to plan out the structure and layout.I used the pl
 
 
 ### Bugs
-- Wireframes doesn't display for some reason - not solved
+- Wireframes doesn't display for some reason - Solved
 
 ---
 
