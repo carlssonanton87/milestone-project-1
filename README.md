@@ -1,7 +1,5 @@
 # Vegan Kök - Recept för Alla!
 
-![Vegan Kök Logo](images/logo.svg)
-
 ## Overview
 
 This project is the **first of four Milestone Projects** for the **Full Stack Developer** course at The Code Institute. 
@@ -11,7 +9,7 @@ Here is a quick preview of how the site looks on various screen sizes:
 
 ![Responsive Screens](assets/images/responsive-screens.png)
 
-https://carlssonanton87.github.io/my-practise-repo/
+https://carlssonanton87.github.io/milestone-project-1/
 
 ## Table of Contents
 - [User Experience (UX)](#user-experience-ux)
@@ -63,20 +61,21 @@ My design decisions are rooted in a user-centric approach:
   Early wireframes guided the placement of essential elements like the header, hero section, content areas, and footer for a smooth user journey across devices.
 
 - **Accessibility & Readability:**  
-  I prioritized clear typography, sufficient color contrast, and logical content structure to enhance accessibility (including ARIA attributes and descriptive alt text).
+  Clear typography, sufficient color contrast, and logical content structure enhance accessibility (including ARIA attributes and descriptive alt text).
 
 - **Iterative Design Process:**  
-  Based on user feedback and testing, i continuously refine the layout, improving the user experience over time.
+  I continuously refined the layout based on user feedback and testing to improve the user experience.
 
 ---
 
 ## Design
 
 ### Wireframes
-I began with low-fidelity wireframes to outline our responsive layout.
-These wireframes were created to plan out the structure and layout.I used the platform Mockflow to create these. You can view all the image files directly in the
-[wireframes folder](https://github.com/carlssonanton87/my-practise-repo/tree/main/wireframes).
-)
+I began with low-fidelity wireframes to outline the responsive layout and plan the structure.  
+These wireframes were created using the **Mockflow** platform. You can view all wireframes in the [wireframes folder](https://github.com/carlssonanton87/milestone-project-1/tree/main/wireframes).
+
+---
+
 
 
 ### Color Palette & Typography
@@ -89,11 +88,6 @@ These wireframes were created to plan out the structure and layout.I used the pl
 **Fonts**  
 - **Headings:** [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) for an elegant, editorial feel.  
 - **Body Text:** [Montserrat](https://fonts.google.com/specimen/Montserrat) for simple, modern readability.
-
-### Imagery
-- High-quality food photography captures the essence of vegan cooking.
-- Natural styling and consistent color palette tie visuals together.
-- *All images are optimized for faster load times.*
 
 ---
 
@@ -145,8 +139,6 @@ These wireframes were created to plan out the structure and layout.I used the pl
 - **CSS3:** Custom styling for layout, animations, and responsiveness.  
 - **JavaScript:** Minimal scripting for mobile nav toggle and smooth scrolling.
 
-### Frameworks & Libraries
-- *None* (All elements are custom-coded).
 
 ### Tools
 - **Git & GitHub** for version control.
@@ -167,64 +159,57 @@ These wireframes were created to plan out the structure and layout.I used the pl
   Passed W3C CSS Validator (Jigsaw) with no errors.
 
 ### Accessibility
-- **Manual Checks:**  
-  - Confirmed ARIA labels on navigation and main sections.  
-  - Ensured descriptive alt texts for images to meet WCAG guidelines.
-- **Color Contrast:**  
-  Verified using Chrome DevTools, ensuring a ratio that meets WCAG standards.
+- Manual checks for ARIA labels and alt text.  
+- Verified color contrast with Chrome DevTools.
 
 ### Browser Compatibility
-- Confirmed functionality on **Chrome**, **Firefox**, **Safari**, and **Edge**.
+- Tested on Chrome, Firefox, Safari, and Edge.
 
 ### Responsiveness
-- Verified on multiple real devices (mobile, tablet, desktop) and via Chrome DevTools for various screen sizes.
-
+- Verified on multiple real devices (mobile, tablet, desktop).
 
 ### Bugs & Fixes
 
+### Bugs & Fixes
 1. **Mobile Navigation Not Appearing**  
-   - **Description:** The hamburger icon would show on smaller screens, but the navigation overlay never appeared when clicked.  
-   - **Cause:** In the CSS `@media (max-width: 768px)` query, `.nav-menu` was set to `display: none;`. The `.active` class applied a slide-in transform (`translateX(0)`) but never overrode the `display: none;`, keeping it hidden.  
-   - **Fix:** Changed `.nav-menu` to `display: flex;` in the mobile media query, ensuring the menu remains visible when `.active` is toggled.  
-   - **Status:** **Solved** 
+   - **Cause:** `display: none;` prevented the menu from showing.  
+   - **Fix:** Changed it to `display: flex;` in the mobile media query.  
 
-2.  **Wireframes doesn't display**  
-   - **Description:** The wireframes didn't show up in as intended.  
-   - **Cause:** The directory for the files was wrong
-   - **Fix:** Changed the directory to the correct one. 
-   - **Status:** **Solved** 
+2. **Wireframes Not Displaying**  
+   - **Cause:** Incorrect directory reference.  
+   - **Fix:** Updated the directory path for wireframe images.  
 
 ---
 
 ## Deployment
 
 ### GitHub Pages Deployment
-1. **Log in** to your GitHub account.
-2. **Navigate** to the repository.
-3. Go to **Settings > Pages**.
-4. **Select** the main branch.
-5. **Save** and wait for GitHub Pages to build and deploy your site.
-6. Typically accessible at: `https://yourusername.github.io/your-repository-name`
+1. Log in to your GitHub account.  
+2. Navigate to the repository.  
+3. Go to **Settings > Pages**.  
+4. Select the **main branch** and save.  
+5. The site will be live at:  
+   [https://carlssonanton87.github.io/milestone-project-1](https://carlssonanton87.github.io/milestone-project-1)  
+
 
 ---
 
 ## How to View Locally
 bash
-1. Clone the repository: `git clone https://github.com/carlssonanton87/my-practise-repo.git`
+1. Clone the repository: `git clone https://github.com/carlssonanton87/milestone-project-1.git`
 2. Open the `index.html` file in your browser.
 
 ## Credit
 
 ### Content
 
-- Recipes developed by [Your Name]
-- Inspiration from [Sources]
+- Recipes developed by Anton
+- Inspiration from various vegan food blogs and online resources.
 
 ### Media
 
-- Images from [Image Sources]
-  - Unsplash
-  
+- Images sourced from Unsplash.
+
   
 
 ### Acknowledgements
@@ -233,20 +218,9 @@ bash
 - My mentors and supporters
 - Open-source community(Slack)
 
+### Final Thoughts
 
-### **Key Updates**
-
-1. **Reflected the New Color Palette & Fonts**  
-   Removed the previous `#2ecc71`, `#27ae60`, etc., and replaced them with your updated palette (`#3C4A3E`, `#A4B494`, etc.).
-
-2. **Mentioned Accessibility Improvements**  
-   Highlighted ARIA labels, alt text, and color contrast checks.
-
-3. **Acknowledged Minimal JavaScript**  
-   Referenced the nav toggle and any smooth scrolling in the “Technologies Used” section.
-
-4. **Added Quick Notes on Deployment**  
-   Added a step for GitHub Pages.
+This project taught me how to build a fully responsive website from scratch with a focus on accessibility and user-centric design. I plan to expand this project with interactive features and more community-driven content in the future.
 
 
 
