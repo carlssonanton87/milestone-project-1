@@ -180,8 +180,19 @@ These wireframes were created to plan out the structure and layout.I used the pl
 - Verified on multiple real devices (mobile, tablet, desktop) and via Chrome DevTools for various screen sizes.
 
 
-### Bugs
-- Wireframes doesn't display for some reason - Solved
+### Bugs & Fixes
+
+1. **Mobile Navigation Not Appearing**  
+   - **Description:** The hamburger icon would show on smaller screens, but the navigation overlay never appeared when clicked.  
+   - **Cause:** In the CSS `@media (max-width: 768px)` query, `.nav-menu` was set to `display: none;`. The `.active` class applied a slide-in transform (`translateX(0)`) but never overrode the `display: none;`, keeping it hidden.  
+   - **Fix:** Changed `.nav-menu` to `display: flex;` in the mobile media query, ensuring the menu remains visible when `.active` is toggled.  
+   - **Status:** **Solved** 
+
+2.  **Wireframes doesn't display**  
+   - **Description:** The wireframes didn't show up in as intended.  
+   - **Cause:** The directory for the files was wrong
+   - **Fix:** Changed the directory to the correct one. 
+   - **Status:** **Solved** 
 
 ---
 

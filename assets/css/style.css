@@ -158,7 +158,7 @@ h1 {
   }
 
   .nav-menu {
-    display: none;
+    display: flex;
     position: fixed;
     top: var(--nav-height);
     left: 0;
