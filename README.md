@@ -9,7 +9,7 @@ Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan
 
 Here is a quick preview of how the site looks on various screen sizes:
 
-![Responsive Screens](images/responsive-screens.png)
+![Responsive Screens](assets/images/responsive-screens.png)
 
 https://carlssonanton87.github.io/my-practise-repo/
 
