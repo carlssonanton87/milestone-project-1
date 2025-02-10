@@ -1,4 +1,6 @@
-# Vegan Kök - Recept för Alla!
+# Green Fork - Plant-Based Recipes for a Healthier Life 🌱
+
+<img src="assets/images/logo/new-logo.png" alt="Green Fork Logo" width="200">
 
 ## Overview
 
