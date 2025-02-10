@@ -5,7 +5,7 @@
 ## Overview
 
 This project is the **first of four Milestone Projects** for the **Full Stack Developer** course at The Code Institute. 
-Vegan Kök is a responsive website dedicated to sharing delicious and easy vegan recipes. My mission is to inspire and simplify plant-based cooking for everyone. The site is built using **custom HTML5, CSS3, and minimal JavaScript**, ensuring an accessible, lightweight, and responsive experience across all devices.
+Green Fork is a responsive website dedicated to sharing delicious and easy vegan recipes. My mission is to inspire and simplify plant-based cooking for everyone. The site is built using **custom HTML5, CSS3, and minimal JavaScript**, ensuring an accessible, lightweight, and responsive experience across all devices.
 
 Here is a quick preview of how the site looks on various screen sizes:
 
