@@ -25,8 +25,8 @@
     Header & Navigation 
     Contains a fixed nav bar with a toggle button for mobile screens and a nav menu.
   -->
-  <header class="nav-container" id="navbar" role="banner" aria-label="Main Navigation">
-    <nav class="navbar" role="navigation" aria-label="Primary">
+  <header class="nav-container" id="navbar" aria-label="Main Navigation">
+    <nav class="navbar" aria-label="Primary">
       <div class="logo">
         <a href="index.html">
           <img src="assets/images/logo/new-logo.png" alt="Site Logo" class="logo-img">
@@ -196,7 +196,7 @@
     Footer 
     Contains info about the site, navigational links, and newsletter subscription form.
   -->
-  <footer class="footer" role="contentinfo" aria-label="Footer">
+  <footer class="footer" aria-label="Footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-info">
@@ -230,10 +230,13 @@
         <div class="footer-newsletter">
           <h4>Håll dig Uppdaterad</h4>
           <p>Prenumerera på vårt nyhetsbrev för att få de senaste recepten och matlagningsinspiration.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Din E-postadress" required>
-            <button type="submit" class="btn">Prenumerera</button>
-          </form>
+          <form id="newsletter-form" class="newsletter-form">
+  <input type="email" placeholder="Din E-postadress" required>
+  <button type="submit" class="btn">Prenumerera</button>
+  <p id="newsletter-success" style="display: none; color: #A4B494; margin-top: 1rem;">
+    Tack för din prenumeration!
+  </p>
+</form>
         </div>
       </div>
       

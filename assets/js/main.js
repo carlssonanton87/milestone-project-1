@@ -17,3 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('newsletter-form');
+  const successMessage = document.getElementById('newsletter-success');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // prevent reload
+      successMessage.style.display = 'block'; // show message
+      form.reset(); // clear form
+    });
+  }
+});
