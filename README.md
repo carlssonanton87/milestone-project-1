@@ -191,19 +191,6 @@ All images were sourced from [Unsplash](https://unsplash.com/) and optimized for
 
 ## Testing
 
-### HTML Validator Results
-
-| Page                      | Screenshot                                                     | Result     |
-|---------------------------|----------------------------------------------------------------|------------|
-| `index.html`              | ![Index HTML Validation](assets/images/testing/validate-index.png)        | ✅ Passed  |
-| `about.html`              | ![About HTML Validation](assets/images/testing/validate-about.png)        | ✅ Passed  |
-| `contact.html`            | ![Contact HTML Validation](assets/images/testing/validate-contact.png)    | ✅ Passed  |
-| `recipes/index.html`      | ![Recipes Index Validation](assets/images/testing/validate-recipes.png)   | ✅ Passed  |
-| `recipes/buddha-bowl.html`| ![Buddha Bowl Validation](assets/images/testing/validate-buddha.png)      | ✅ Passed  |
-| `recipes/hostlig-gryta.html` | ![Höstlig Gryta Validation](assets/images/testing/validate-gryta.png)   | ✅ Passed  |
-| `recipes/kramig-svamppasta.html` | ![Svamppasta Validation](assets/images/testing/validate-svamppasta.png) | ✅ Passed  |
-| `recipes/quinoasallad.html` | ![Quinoasallad Validation](assets/images/testing/validate-quinoa.png) | ✅ Passed  |
-
 
 ### Validator Testing
 
@@ -214,7 +201,6 @@ All images were sourced from [Unsplash](https://unsplash.com/) and optimized for
 | `index.html`              | ![Index HTML Validation](assets/images/testing/validate-index.png)        | ✅ Passed  |
 | `about.html`              | ![About HTML Validation](assets/images/testing/validate-about.png)        | ✅ Passed  |
 | `contact.html`            | ![Contact HTML Validation](assets/images/testing/validate-contact.png)    | ✅ Passed  |
-| `recipes/index.html`      | ![Recipes Index Validation](assets/images/testing/validate-recipes.png)   | ✅ Passed  |
 | `recipes/buddha-bowl.html`| ![Buddha Bowl Validation](assets/images/testing/validate-buddha.png)      | ✅ Passed  |
 | `recipes/hostlig-gryta.html` | ![Höstlig Gryta Validation](assets/images/testing/validate-gryta.png)   | ✅ Passed  |
 | `recipes/kramig-svamppasta.html` | ![Svamppasta Validation](assets/images/testing/validate-svamppasta.png) | ✅ Passed  |
@@ -228,8 +214,23 @@ All images were sourced from [Unsplash](https://unsplash.com/) and optimized for
 | `style.css`            | ![CSS Validation](assets/images/testing/validate-css.png)    | ✅ Passed  |
 
 
+### Test Cases
 
 
+
+### 🔍 Manual Test Cases
+
+| Test Scenario                         | Steps to Test                                                                                                                                     | Expected Result                                                                                       | Pass/Fail | Screenshot                                                   |
+|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------|
+| Mobile navigation toggle             | Resize to mobile, click hamburger icon                                                                                                           | Nav menu appears and hides as expected                                                               | ✅ Pass  | ![Nav Toggle](assets/images/testing/nav-toggle.png)          |
+| Responsive layout on desktop         | Open site in full-width (1920px) desktop browser                                                                                                 | Layout adjusts properly without overflowing elements                                                  | ✅ Pass  | ![Desktop View](assets/images/testing/desktop-view.png)      |
+| Contact form styling                 | Open `contact.html` and inspect styling of all inputs                                                                                            | All input fields and textareas use consistent font and padding                                       | ✅ Pass  | ![Contact Form](assets/images/testing/contact-form.png)      |
+| Recipe link from subpages            | From `about.html`, `contact.html`, or recipe pages, click "Recept"                                                                              | Navigates to `index.html#recipes` without 404 error                                                  | ✅ Pass  | ![Recipe Link Fix](assets/images/testing/recipe-link-fix.png)|
+| Footer social icons                  | Click social media icons in footer                                                                                                               | Opens correct placeholder/social platform in new tab                                                 | ✅ Pass  | ![Footer Icons](assets/images/testing/footer.png)      |
+| Hero image responsiveness            | View hero section on mobile (iPhone SE, Galaxy S10)                                                                                              | Image scales properly, fills screen without cropping or grey areas                                   | ✅ Pass  | ![Hero Mobile](assets/images/testing/hero-mobile.png)        |
+| Newsletter submission functionality  | Enter email and click "Prenumerera" button                                                                                                       | Shows alert confirmation, does not redirect or refresh page                                          | ✅ Pass  | ![Newsletter](assets/images/testing/newsletter-feedback.png)          |
+
+---
 
 ### Accessibility
 - Manual checks for ARIA labels and alt text.  
