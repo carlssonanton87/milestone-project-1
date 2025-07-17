@@ -252,7 +252,7 @@ All images were sourced from [Unsplash](https://unsplash.com/) and optimized for
 | Contact form font mismatch | Unified all `.form-input` styles across input and textarea |
 | Hero image cropped on mobile | Adjusted background properties and added padding |
 | Newsletter button redirects to homepage | Replaced form action with `event.preventDefault()` and confirmation alert |
-| Social links inactive | Updated footer links to point to actual platforms (or placeholders with `target="_blank"`) |
+| Social links inactive | Updated footer links to point to actual platforms |
 
 ---
 
@@ -274,31 +274,46 @@ bash
 1. Clone the repository: `git clone https://github.com/carlssonanton87/milestone-project-1.git`
 2. Open the `index.html` file in your browser.
 
-## Credit
+## 🙏 Credits
 
-### Content
+### 📚 Content
 
-- Recipes developed by Anton
-- Inspiration from various vegan food blogs and online resources.
+- All recipes were developed, written, and tested by **Anton Carlsson**.
+- Inspiration and adaptation ideas were drawn from:
+  - [Minimalist Baker](https://minimalistbaker.com/)
+  - [Veganuary](https://veganuary.com/)
+  - [The Vegan Society](https://www.vegansociety.com/)
 
-### Media
+### 🖼️ Media
 
-- Images sourced from Unsplash.
+- **Hero and recipe imagery** sourced from [Unsplash](https://unsplash.com) under the Unsplash License.  
+  - Hero background: *Photo by Ella Olsson*  
+  - Recipe images: *Photos by Brooke Lark, Anna Pelzer
 
-### Code Attribution
-- Responsive nav inspired by Kevin Powell's tutorials
-- ARIA labels and semantic HTML guided by MDN documentation
-- Layout debugging aided by Stack Overflow threads
+### 🧠 Code Attribution
 
-### Acknowledgements
+- **Navigation Menu Toggle:**  
+  Code pattern and accessibility ideas adapted from [Kevin Powell's responsive nav tutorial on YouTube](https://www.youtube.com/watch?v=At4B7A4GOPg).
+- **ARIA roles and accessibility tags:**  
+  Guidance from [MDN Web Docs - ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
+- **Smooth scroll behavior:**  
+  CSS scroll behavior technique referenced from [CSS Tricks](https://css-tricks.com/snippets/css/smooth-scrolling/).
+- **Form Styling Techniques:**  
+  Layout and structure inspired by [W3Schools](https://www.w3schools.com/) and peer feedback.
+- **HTML & CSS debugging:**  
+  Stack Overflow threads and discussions were consulted for resolving layout bugs and responsive image fixes.
 
-- Code Institute
-- My mentors and supporters
-- Open-source community(Slack)
+### 💬 Acknowledgements
 
-### Final Thoughts
+- **Code Institute** for providing the Full Stack Developer curriculum and milestone framework.
+- My mentor and Slack community peers for feedback and support throughout the project.
+- Fellow learners, tutors, and reviewers for testing and suggestions during development.
 
-This project taught me how to build a fully responsive website from scratch with a focus on accessibility and user-centric design. I plan to expand this project with interactive features and more community-driven content in the future.
+### 🧩 Final Thoughts
+
+This project helped me develop confidence in writing structured, semantic HTML and responsive CSS from scratch. It also gave me hands-on experience with accessibility, ARIA roles, form UX, and mobile-first design. I now feel more confident working with multi-page static sites and plan to improve this project further by introducing dynamic recipe filtering and user-generated content features in the future.
+
+
 
 
 
