@@ -224,7 +224,7 @@ h1 {
 
 @media (max-width: 768px) {
   .hero {
-    background-size: contain;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center top;
   }

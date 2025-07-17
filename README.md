@@ -36,6 +36,12 @@ https://carlssonanton87.github.io/milestone-project-1/
 ## User Experience (UX)
 
 ### Project Goals
+The main goals of Green Fork are:
+- To provide a visually appealing, structured platform where users can browse plant-based recipes.
+- To ensure accessibility across all devices and browsers.
+- To introduce beginners to web development using semantic HTML and responsive CSS.
+- To create an experience that mimics a real-world recipe website.
+- To provide clear navigation, consistent design, and engaging imagery that encourages exploration.
 
 #### User Goals
 - Discover a variety of easy and delicious vegan recipes.
@@ -81,16 +87,25 @@ These wireframes were created using the **Mockflow** platform. You can view all 
 
 
 ### Color Palette & Typography
-- **Primary Sage:** `#3C4A3E`  
-- **Secondary Mint:** `#A4B494`  
-- **Accent Color:** `#8B9D83`  
-- **Background Light:** `#FAFAF2`  
-- **Text Dark:** `#2C2C2C`
+**Palette:** [Palette](https://coolors.co/3c4a3e-a4b494-8b9d83-fafaf2-2c2c2c)
+| Color             | Hex       | Usage                         |
+|------------------|-----------|-------------------------------|
+| Sage Green        | `#3C4A3E` | Primary text, nav background  |
+| Soft Mint         | `#A4B494` | Highlights & accents          |
+| Accent Olive      | `#8B9D83` | Buttons, hover states         |
+| Background Cream  | `#FAFAF2` | General background            |
+| Text Dark         | `#2C2C2C` | Headings and body text        |
+
+<img src="assets/images/palette.png" alt="Color Palette" width="300">
+
 
 **Fonts**  
 - **Headings:** [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) for an elegant, editorial feel.  
 - **Body Text:** [Montserrat](https://fonts.google.com/specimen/Montserrat) for simple, modern readability.
 
+### Imagery
+
+All images were sourced from [Unsplash](https://unsplash.com/) and optimized for performance.
 ---
 
 ## Features
@@ -98,24 +113,45 @@ These wireframes were created using the **Mockflow** platform. You can view all 
 ### Existing Features
 
 1. **Modern Navigation**  
+
+    <img src="assets/images/features/navbar.png" alt="Navigation Bar Feature" width="300">
+
    - A fixed header with a mobile-friendly toggle menu, ensuring easy access to main sections (Home, Recipes, About, Contact).
 
 2. **Hero Section**  
+
+    <img src="assets/images/features/hero.png" alt="Hero Section" width="300">
+
    - An eye-catching hero with a background image and a clear call-to-action (“Utforska Våra Recept”), highlighting the site’s primary goal.
 
-3. **Recipe Section**  
+3. **Recipe Section**
+
+    <img src="assets/images/features/recipes.png" alt="Recipe Cards" width="300">
+
    - A grid of recipe cards (e.g., Buddha Bowl, Höstlig Gryta, Krämig Svamppasta, Quinoasallad), each linking to a dedicated recipe detail page containing ingredients, instructions, and imagery.
 
-4. **Dedicated Recipe Pages**  
+4. **Dedicated Recipe Pages** 
+
+    <img src="assets/images/features/recipe-page.png" alt="Recipe Detail Page" width="300"> 
+
    - Individual pages (`buddha-bowl.html`, `hostlig-gryta.html`, `kramig-svamppasta.html`, `quinoasallad.html`) provide deeper content for each recipe, including step-by-step instructions, cooking times, and serving suggestions.
 
 5. **About Section**  
+
+    <img src="assets/images/features/about.png" alt="About Page" width="300">
+
    - A sleek “About Us” feature on the main page, plus a dedicated `about.html` with more team info and values. The layout includes a mini hero area, a team image, and site values to convey brand identity.
 
 6. **Contact Form**  
+
+    <img src="assets/images/features/contact.png" alt="Contact Page" width="300">
+
    - A simple, intuitive form allowing users to send inquiries or feedback quickly and conveniently.
 
-7. **Responsive Layout**  
+7. **Responsive Layout** 
+
+    <img src="assets/images/features/responsive.png" alt="Responsive" width="300">
+
    - Optimized for mobile, tablet, and desktop devices using CSS media queries and mobile-first practices.
 
 ### Future Features
@@ -149,6 +185,7 @@ These wireframes were created using the **Mockflow** platform. You can view all 
 - **Live Server Extension** for live preview.  
 - **W3C Validators** for HTML/CSS validation.  
 - **Chrome DevTools** for responsiveness testing.
+- **Mockflow** – Wireframing
 
 ---
 
@@ -159,6 +196,31 @@ These wireframes were created using the **Mockflow** platform. You can view all 
   Passed W3C HTML Validator with no errors.
 - **CSS:**  
   Passed W3C CSS Validator (Jigsaw) with no errors.
+
+### Test Cases
+
+| Test Case Description                     | Screenshot                                                   | Result     |
+|-------------------------------------------|--------------------------------------------------------------|------------|
+| Mobile navigation works                   | ![Nav Toggle](assets/images/testing/nav-toggle.png)          | ✅ Passed  |
+| Responsive layout on desktop              | ![Desktop View](assets/images/testing/desktop-view.png)      | ✅ Passed  |
+| Contact form layout and styling           | ![Contact Form](assets/images/testing/contact-form.png)      | ✅ Passed  |
+| Broken links avoided (e.g. recipes)       | ![Recipe Link Fix](assets/images/testing/recipe-link-fix.png)| ✅ Passed  |
+| Footer social icons visible               | ![Footer Icons](assets/images/testing/footer.png)      | ✅ Passed  |
+| Hero image scales correctly on mobile     | ![Hero Mobile](assets/images/testing/hero-mobile.png)        | ✅ Passed  |
+| Newsletter submission does not break flow | ![Newsletter](assets/images/testing/newsletter-feedback.png)          | ✅ Passed  |
+
+
+### Test Cases
+
+| Test Case Description | Screenshot Placeholder | Result |
+|-----------------------|------------------------|--------|
+| Mobile navigation works | `assets/images/testing/nav-toggle.png` | ✅ Passed |
+| Responsive layout on desktop | `assets/images/testing/desktop-view.png` | ✅ Passed |
+| Contact form layout and styling | `assets/images/testing/contact-form.png` | ✅ Passed |
+| Broken links avoided (e.g. recipes) | `assets/images/testing/recipe-link-fix.png` | ✅ Passed |
+| Footer social links works | `assets/images/testing/footer.png` | ✅ Passed |
+| Hero image scales correctly on mobile | `assets/images/testing/hero-mobile.png` | ✅ Passed |
+| Newsletter submission does not break flow | `assets/images/testing/newsletter-feedback.png` | ✅ Passed |
 
 ### Accessibility
 - Manual checks for ARIA labels and alt text.  
@@ -172,14 +234,15 @@ These wireframes were created using the **Mockflow** platform. You can view all 
 
 ### Bugs & Fixes
 
-### Bugs & Fixes
-1. **Mobile Navigation Not Appearing**  
-   - **Cause:** `display: none;` prevented the menu from showing.  
-   - **Fix:** Changed it to `display: flex;` in the mobile media query.  
 
-2. **Wireframes Not Displaying**  
-   - **Cause:** Incorrect directory reference.  
-   - **Fix:** Updated the directory path for wireframe images.  
+| Issue | Fix |
+|-------|-----|
+| Mobile nav not opening | Applied `display: flex` instead of `none` in responsive menu styles |
+| Recipe link broken from subpages | Changed `href="index.html#recipes"` to `href="../index.html#recipes"` |
+| Contact form font mismatch | Unified all `.form-input` styles across input and textarea |
+| Hero image cropped on mobile | Adjusted background properties and added padding |
+| Newsletter button redirects to homepage | Replaced form action with `event.preventDefault()` and confirmation alert |
+| Social links inactive | Updated footer links to point to actual platforms (or placeholders with `target="_blank"`) |
 
 ---
 
@@ -212,7 +275,10 @@ bash
 
 - Images sourced from Unsplash.
 
-  
+### Code Attribution
+- Responsive nav inspired by Kevin Powell's tutorials
+- ARIA labels and semantic HTML guided by MDN documentation
+- Layout debugging aided by Stack Overflow threads
 
 ### Acknowledgements
 
