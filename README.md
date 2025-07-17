@@ -191,36 +191,41 @@ All images were sourced from [Unsplash](https://unsplash.com/) and optimized for
 
 ## Testing
 
+### HTML Validator Results
+
+| Page                      | Screenshot                                                     | Result     |
+|---------------------------|----------------------------------------------------------------|------------|
+| `index.html`              | ![Index HTML Validation](assets/images/testing/validate-index.png)        | ✅ Passed  |
+| `about.html`              | ![About HTML Validation](assets/images/testing/validate-about.png)        | ✅ Passed  |
+| `contact.html`            | ![Contact HTML Validation](assets/images/testing/validate-contact.png)    | ✅ Passed  |
+| `recipes/index.html`      | ![Recipes Index Validation](assets/images/testing/validate-recipes.png)   | ✅ Passed  |
+| `recipes/buddha-bowl.html`| ![Buddha Bowl Validation](assets/images/testing/validate-buddha.png)      | ✅ Passed  |
+| `recipes/hostlig-gryta.html` | ![Höstlig Gryta Validation](assets/images/testing/validate-gryta.png)   | ✅ Passed  |
+| `recipes/kramig-svamppasta.html` | ![Svamppasta Validation](assets/images/testing/validate-svamppasta.png) | ✅ Passed  |
+| `recipes/quinoasallad.html` | ![Quinoasallad Validation](assets/images/testing/validate-quinoa.png) | ✅ Passed  |
+
+
 ### Validator Testing
-- **HTML:**  
-  Passed W3C HTML Validator with no errors.
+
+#### HTML Validator Results
+
+| Page                      | Screenshot                                                     | Result     |
+|---------------------------|----------------------------------------------------------------|------------|
+| `index.html`              | ![Index HTML Validation](assets/images/testing/validate-index.png)        | ✅ Passed  |
+| `about.html`              | ![About HTML Validation](assets/images/testing/validate-about.png)        | ✅ Passed  |
+| `contact.html`            | ![Contact HTML Validation](assets/images/testing/validate-contact.png)    | ✅ Passed  |
+| `recipes/index.html`      | ![Recipes Index Validation](assets/images/testing/validate-recipes.png)   | ✅ Passed  |
+| `recipes/buddha-bowl.html`| ![Buddha Bowl Validation](assets/images/testing/validate-buddha.png)      | ✅ Passed  |
+| `recipes/hostlig-gryta.html` | ![Höstlig Gryta Validation](assets/images/testing/validate-gryta.png)   | ✅ Passed  |
+| `recipes/kramig-svamppasta.html` | ![Svamppasta Validation](assets/images/testing/validate-svamppasta.png) | ✅ Passed  |
+| `recipes/quinoasallad.html` | ![Quinoasallad Validation](assets/images/testing/validate-quinoa.png) | ✅ Passed  |
+
+
 - **CSS:**  
   Passed W3C CSS Validator (Jigsaw) with no errors.
 
-### Test Cases
-
-| Test Case Description                     | Screenshot                                                   | Result     |
-|-------------------------------------------|--------------------------------------------------------------|------------|
-| Mobile navigation works                   | ![Nav Toggle](assets/images/testing/nav-toggle.png)          | ✅ Passed  |
-| Responsive layout on desktop              | ![Desktop View](assets/images/testing/desktop-view.png)      | ✅ Passed  |
-| Contact form layout and styling           | ![Contact Form](assets/images/testing/contact-form.png)      | ✅ Passed  |
-| Broken links avoided (e.g. recipes)       | ![Recipe Link Fix](assets/images/testing/recipe-link-fix.png)| ✅ Passed  |
-| Footer social icons visible               | ![Footer Icons](assets/images/testing/footer.png)      | ✅ Passed  |
-| Hero image scales correctly on mobile     | ![Hero Mobile](assets/images/testing/hero-mobile.png)        | ✅ Passed  |
-| Newsletter submission does not break flow | ![Newsletter](assets/images/testing/newsletter-feedback.png)          | ✅ Passed  |
 
 
-### Test Cases
-
-| Test Case Description | Screenshot Placeholder | Result |
-|-----------------------|------------------------|--------|
-| Mobile navigation works | `assets/images/testing/nav-toggle.png` | ✅ Passed |
-| Responsive layout on desktop | `assets/images/testing/desktop-view.png` | ✅ Passed |
-| Contact form layout and styling | `assets/images/testing/contact-form.png` | ✅ Passed |
-| Broken links avoided (e.g. recipes) | `assets/images/testing/recipe-link-fix.png` | ✅ Passed |
-| Footer social links works | `assets/images/testing/footer.png` | ✅ Passed |
-| Hero image scales correctly on mobile | `assets/images/testing/hero-mobile.png` | ✅ Passed |
-| Newsletter submission does not break flow | `assets/images/testing/newsletter-feedback.png` | ✅ Passed |
 
 ### Accessibility
 - Manual checks for ARIA labels and alt text.  
