@@ -221,8 +221,12 @@ All images were sourced from [Unsplash](https://unsplash.com/) and optimized for
 | `recipes/quinoasallad.html` | ![Quinoasallad Validation](assets/images/testing/validate-quinoa.png) | ✅ Passed  |
 
 
-- **CSS:**  
-  Passed W3C CSS Validator (Jigsaw) with no errors.
+#### CSS Validator Results
+
+| Stylesheet            | Screenshot                                                   | Result     |
+|------------------------|--------------------------------------------------------------|------------|
+| `style.css`            | ![CSS Validation](assets/images/testing/validate-css.png)    | ✅ Passed  |
+
 
 
 
