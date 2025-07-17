@@ -576,6 +576,7 @@ h1 {
   border: 1px solid var(--accent-color);
   background: transparent;
   transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
 }
 .form-input:focus {
   outline: none;
