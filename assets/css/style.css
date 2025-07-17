@@ -222,6 +222,15 @@ h1 {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+
 /* Adding a stronger overlay to ensure text readability. */
 .hero::before {
   content: '';
